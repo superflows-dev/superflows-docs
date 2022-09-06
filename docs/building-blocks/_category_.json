@@ -1,0 +1,8 @@
+{
+  "label": "Building Blocks",
+  "position":3,
+  "link": {
+    "type": "generated-index",
+    "description": "Basic building blocks of the superflows component"
+  }
+}
