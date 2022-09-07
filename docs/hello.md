@@ -16,9 +16,20 @@ Superflows provides you a set of plug and play, reusable and customizable compon
 
 ## Techstack
 
+Following are the features of the Superflows techstack:
 <div>
-<img src="https://user-images.githubusercontent.com/108924653/188312200-f364212d-1c45-4bfe-ae4b-f1749594a9bd.png" height="300" width="300" />
+<img src="https://user-images.githubusercontent.com/108924653/188783367-062819bf-a9ca-4c9d-8a35-a7c9d6ec5d41.png" height="300" width="300" />
 </div>
+
+- Designed for React projects
+- Backend is based on AWS cloud
+- For Backend, Superflows integrates with AWS SDK
+- Code is hundred percent React, no backend coding required
+- Scalability is built-in as AWS serverless tech is used
+
+## Superflows Component System
+
+Superflows is not a single library. It is designed as a collection of reusable components and their respective libraries. Every component has a defined purpose & function and can be thought of as a single plug and play unit. By integrating these components together, you can build a complex web application.
 
 ## About Superflows
 

@@ -5,9 +5,9 @@ sidebar_position: 2
 
 # Customize
 
-Learn how to customize the Superflows colors to suit your UI.
+Learn how to customize the appearance of the Superflows components to suit your UI.
 
-## Theme Package: react-sf-themes
+## react-sf-themes
 
 Use the react-sf-themes package to access the default theme provided by Superflows. Then customize it further by changing the default color values & spaces to suit your UI. 
 
