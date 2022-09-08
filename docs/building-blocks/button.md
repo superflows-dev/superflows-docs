@@ -25,7 +25,6 @@ The button component is **SfButton**.
 ### Imports
 
 ```jsx
-import React from 'react'
 import { SfButton } from 'react-sf-building-blocks'
 ```
 
@@ -36,14 +35,16 @@ function Apps(props) {
   
     return (
         <table>
-            <tr>
-                <td>
-                    <SfButton variant={'primary'} type={'filled'} caption={'Next'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-                <td>
-                    <SfButton variant={'primary'} type={'outlined'} caption={'Next'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>
+                        <SfButton variant={'primary'} type={'filled'} caption={'Next'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                    <td>
+                        <SfButton variant={'primary'} type={'outlined'} caption={'Next'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     );
 }
@@ -56,62 +57,64 @@ function Apps(props) {
   
     return (
         <table>
-            <tr>
-                <td>
-                    <SfButton variant={'primary'} type={'filled'} caption={'Primary Filled'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-                <td>
-                    <SfButton variant={'primary'} type={'outlined'} caption={'Primary Outlined'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <SfButton variant={'secondary'} type={'filled'} caption={'Secondary Filled'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-                <td>
-                    <SfButton variant={'secondary'} type={'outlined'} caption={'Secondary Outliined'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <SfButton variant={'danger'} type={'filled'} caption={'Danger Filled'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-                <td>
-                    <SfButton variant={'danger'} type={'outlined'} caption={'Danger Outlined'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <SfButton variant={'success'} type={'filled'} caption={'Success Filled'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-                <td>
-                    <SfButton variant={'success'} type={'outlined'} caption={'Success Outlined'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <SfButton variant={'warning'} type={'filled'} caption={'Warning Filled'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-                <td>
-                    <SfButton variant={'warning'} type={'outlined'} caption={'Warning Outlined'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <SfButton variant={'dark'} type={'filled'} caption={'Dark Filled'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-                <td>
-                    <SfButton variant={'dark'} type={'outlined'} caption={'Dark Outlined'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <SfButton variant={'light'} type={'filled'} caption={'Light Filled'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-                <td>
-                    <SfButton variant={'light'} type={'outlined'} caption={'Light Outlined'} onClick={(event) => {alert('clicked');}}/>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>
+                        <SfButton variant={'primary'} type={'filled'} caption={'Primary Filled'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                    <td>
+                        <SfButton variant={'primary'} type={'outlined'} caption={'Primary Outlined'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <SfButton variant={'secondary'} type={'filled'} caption={'Secondary Filled'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                    <td>
+                        <SfButton variant={'secondary'} type={'outlined'} caption={'Secondary Outliined'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <SfButton variant={'danger'} type={'filled'} caption={'Danger Filled'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                    <td>
+                        <SfButton variant={'danger'} type={'outlined'} caption={'Danger Outlined'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <SfButton variant={'success'} type={'filled'} caption={'Success Filled'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                    <td>
+                        <SfButton variant={'success'} type={'outlined'} caption={'Success Outlined'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <SfButton variant={'warning'} type={'filled'} caption={'Warning Filled'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                    <td>
+                        <SfButton variant={'warning'} type={'outlined'} caption={'Warning Outlined'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <SfButton variant={'dark'} type={'filled'} caption={'Dark Filled'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                    <td>
+                        <SfButton variant={'dark'} type={'outlined'} caption={'Dark Outlined'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <SfButton variant={'light'} type={'filled'} caption={'Light Filled'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                    <td>
+                        <SfButton variant={'light'} type={'outlined'} caption={'Light Outlined'} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     );
 }
@@ -124,24 +127,24 @@ function Apps(props) {
   
     return (
         <table>
-            <tr>
-                <td>
-                    <SfButton variant={'primary'} type={'filled'} caption={'Primary Filled'} disabled={true} onClick={(event) => {alert('clicked');}}/>
-                </td>
-                <td>
-                    <SfButton variant={'primary'} type={'outlined'} caption={'Primary Outlined'} disabled={true} onClick={(event) => {alert('clicked');}}/>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>
+                        <SfButton variant={'primary'} type={'filled'} caption={'Primary Filled'} disabled={true} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                    <td>
+                        <SfButton variant={'primary'} type={'outlined'} caption={'Primary Outlined'} disabled={true} onClick={(event) => {alert('clicked');}}/>
+                    </td>
+                </tr>  
+            </tbody>
         </table>
     );
 }
 ```
 
-## Icon Button
+## Icon
 
 ```jsx
-import React from 'react'
-import { SfButton } from 'react-sf-building-blocks'
 import {ArrowRight} from 'react-bootstrap-icons';
 ```
 
@@ -150,14 +153,16 @@ function Apps(props) {
   
     return (
         <table>
-            <tr>
-                <td>
-                    <SfButton variant={'primary'} type={'filled'} caption={'Primary Filled'} onClick={(event) => {alert('clicked');}} icon={<ArrowRight />}/>
-                </td>
-                <td>
-                    <SfButton variant={'primary'} type={'outlined'} caption={'Primary Outlined'} onClick={(event) => {alert('clicked');}} icon={<ArrowRight />}/>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>
+                        <SfButton variant={'primary'} type={'filled'} caption={'Primary Filled'} onClick={(event) => {alert('clicked');}} icon={<ArrowRight />}/>
+                    </td>
+                    <td>
+                        <SfButton variant={'primary'} type={'outlined'} caption={'Primary Outlined'} onClick={(event) => {alert('clicked');}} icon={<ArrowRight />}/>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     );
 }

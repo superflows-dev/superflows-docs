@@ -1,34 +1,36 @@
 ---
-sidebar_label: 'Customize'
+sidebar_label: 'Globals & Customization'
 sidebar_position: 2
 ---
 
-# Customize
+# Globals & Customization
 
-Learn how to customize the appearance of the Superflows components to suit your UI.
+Let us start by learning about the most basic package - react-sf-themes. Use the react-sf-themes package to access the global configuration and the default theme provided by Superflows.
 
 ## react-sf-themes
 
-Use the react-sf-themes package to access the default theme provided by Superflows. Then customize it further by changing the default color values & spaces to suit your UI. 
+Use the react-sf-themes package to access the global configuration & default theme provided by Superflows. Then customize it further by changing the default values to suit your UI. 
 
 ## How It Works
 
 Customization works as follows:
-- Access the default theme using this package
-- Modify the colors & spaces as per your requirement
-- Pass the modified theme to your Superflows components
+- Access the default configuration and theme values using this package
+- Modify them as per your requirement
+- Pass the modified object to your Superflows components
 
 ## Theme
 
-Theme is a set of:
+This package provides default values for:
 - Variants
 - Types
 - Colors
 - Spaces
+- Modes
+- InputTypes
 
 ### Variants
 
-Superflows provides the following variants:
+Superflows provides the following variants: 
 - Primary
 - Secondary
 - Danger
@@ -40,13 +42,13 @@ Superflows provides the following variants:
 
 ### Types
 
-Superflows provides two types:
+Types are as followed:
 - Filled
 - Outlined
 
 ### Colors
 
-Following colors are defined by default:
+Following colors are provided:
 
 | Variant      | Background Color  | Text Color         |
 |--------------|-------------------|--------------------|
@@ -73,6 +75,28 @@ Spaces are dimensions, which are intended to be used for spacings, paddings, mar
 | xlg        | 30
 | max        | 35
 
+## Modes
+
+Modes are:
+
+| Mode       | Value  
+|------------|-------------------
+| Day        | day
+| Night      | night
+
+## InputTypes
+
+Input types are types of input accepted from the users in the input field.
+
+| InputType       | Value  
+|-----------------|-------------------
+| Name            | name
+| Email           | email
+| Mobile          | mobile
+| Date            | date
+| DateOfBirth     | dateOfBirth
+| Gender          | gender
+| SearchString    | searchString
 
 ## Quickstart
 

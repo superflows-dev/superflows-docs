@@ -120,7 +120,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} Superflows<br /><small><small>Made in India, from the heart by <a href="">Hrushi M</a></small></small>`,
+        copyright: `Copyright © ${new Date().getFullYear()} Superflows<br /><small><small>Maintained by <a href="">Hrushi M</a></small></small>`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -131,7 +131,7 @@ const config = {
          * The position of the live playground, above or under the editor
          * Possible values: "top" | "bottom"
          */
-        playgroundPosition: 'bottom',
+        playgroundPosition: 'top',
       },
     }),
 };
