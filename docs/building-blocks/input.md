@@ -25,6 +25,7 @@ Types of inputs supported are as follows:
 SfInput also has some additional in-built features.
 - **Built-in Validations** - validation of user input happens according to the inputType as the user types
 - **Enter Press Handling** - onEnterPressed callback can be used to detect when the user presses the enter key
+- **Day / Night Mode** - in-built support for day mode and night mode, set using a prop
 
 ## Props
 
