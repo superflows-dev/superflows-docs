@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Superflows',
   tagline: 'Reusable Serverless Components',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://superflows.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
