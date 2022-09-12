@@ -77,6 +77,14 @@ function Apps(props) {
                         <SfInput inputType="email" variant={'secondary'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}}/>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <SfInput inputType="mobile" variant={'primary'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}}/>
+                    </td>
+                    <td>
+                        <SfInput inputType="mobile" variant={'secondary'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}}/>
+                    </td>
+                </tr>
             </tbody>
         </table>
     );
@@ -109,10 +117,10 @@ function Apps(props) {
                 </tr>
                 <tr>
                     <td>
-                        <SfInput inputType="email" variant={'warning'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}}/>
+                        <SfInput inputType="mobile" variant={'warning'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}}/>
                     </td>
                     <td>
-                        <SfInput inputType="email" variant={'info'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}}/>
+                        <SfInput inputType="mobile" variant={'info'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}}/>
                     </td>
                 </tr>
                 <tr>
@@ -153,6 +161,14 @@ function Apps(props) {
                         <SfInput inputType="email" variant={'success'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} disabled={true}/>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <SfInput inputType="mobile" variant={'warning'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}} disabled={true}/>
+                    </td>
+                    <td>
+                        <SfInput inputType="mobile" variant={'info'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}} disabled={true}/>
+                    </td>
+                </tr>
             </tbody>
         </table>
     );
@@ -162,7 +178,7 @@ function Apps(props) {
 ## Icon
 
 ```jsx
-import {CardHeading} from 'react-bootstrap-icons';
+import {CardHeading, EnvelopeFill, PhoneFill} from 'react-bootstrap-icons';
 ```
 
 ```jsx live
@@ -185,6 +201,14 @@ function Apps(props) {
                     </td>
                     <td>
                         <SfInput inputType="email" variant={'success'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} icon={<EnvelopeFill />}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <SfInput inputType="mobile" variant={'warning'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}} icon={<PhoneFill />}/>
+                    </td>
+                    <td>
+                        <SfInput inputType="mobile" variant={'info'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}} icon={<PhoneFill />}/>
                     </td>
                 </tr>
             </tbody>
@@ -217,6 +241,14 @@ function Apps(props) {
                         <SfInput inputType="email" variant={'success'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} hint="abc@def.com"/>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <SfInput inputType="mobile" variant={'warning'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}} hint="+<country-code><number>"/>
+                    </td>
+                    <td>
+                        <SfInput inputType="mobile" variant={'info'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}} hint="+<country-code><number>"/>
+                    </td>
+                </tr>
             </tbody>
         </table>
     );
@@ -241,10 +273,18 @@ function Apps(props) {
                 </tr>
                 <tr>
                     <td>
-                        <SfInput inputType="email" variant={'danger'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha"/>
+                        <SfInput inputType="email" variant={'danger'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="sneha.g@abc.com"/>
                     </td>
                     <td>
-                        <SfInput inputType="email" variant={'success'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="G"/>
+                        <SfInput inputType="email" variant={'success'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="sneha.g@abc.com"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <SfInput inputType="mobile" variant={'warning'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}} value={{isd: "+91", number: '8422334455'}}/>
+                    </td>
+                    <td>
+                        <SfInput inputType="mobile" variant={'info'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}} value={{isd: "+91", number: '8422334455'}}/>
                     </td>
                 </tr>
             </tbody>
@@ -271,58 +311,18 @@ function Apps(props) {
                 </tr>
                 <tr>
                     <td style={{backgroundColor: 'black'}}>
-                        <SfInput inputType="name" variant={'secondary'} caption={'First Name'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha" mode="night"/>
+                        <SfInput inputType="email" variant={'secondary'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha" mode="night"/>
                     </td>
                     <td>
-                        <SfInput inputType="name" variant={'secondary'} caption={'First Name'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha"/>
+                        <SfInput inputType="email" variant={'secondary'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha"/>
                     </td>
                 </tr>
                 <tr>
                     <td style={{backgroundColor: 'black'}}>
-                        <SfInput inputType="name" variant={'danger'} caption={'First Name'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha" mode="night"/>
+                        <SfInput inputType="mobile" variant={'danger'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha" mode="night" value={{isd: "+91", number: '8422334455'}}/>
                     </td>
                     <td>
-                        <SfInput inputType="name" variant={'danger'} caption={'First Name'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{backgroundColor: 'black'}}>
-                        <SfInput inputType="name" variant={'success'} caption={'First Name'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha" mode="night"/>
-                    </td>
-                    <td>
-                        <SfInput inputType="name" variant={'success'} caption={'First Name'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{backgroundColor: 'black'}}>
-                        <SfInput inputType="email" variant={'warning'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha" mode="night"/>
-                    </td>
-                    <td>
-                        <SfInput inputType="email" variant={'warning'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{backgroundColor: 'black'}}>
-                        <SfInput inputType="email" variant={'info'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha" mode="night"/>
-                    </td>
-                    <td>
-                        <SfInput inputType="email" variant={'info'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{backgroundColor: 'black'}}>
-                        <SfInput inputType="email" variant={'dark'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha" mode="night"/>
-                    </td>
-                    <td>
-                        <SfInput inputType="email" variant={'dark'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{backgroundColor: 'black'}}>
-                        <SfInput inputType="email" variant={'light'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha" mode="night"/>
-                    </td>
-                    <td>
-                        <SfInput inputType="email" variant={'light'} caption={'Email'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha"/>
+                        <SfInput inputType="mobile" variant={'danger'} caption={'Mobile'} onComplete={(event) => {console.log('clicked', event);}} value="Sneha" value={{isd: "+91", number: '8422334455'}}/>
                     </td>
                 </tr>
             </tbody>
