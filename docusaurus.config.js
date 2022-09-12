@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/superflows_gray_200.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -60,7 +60,7 @@ const config = {
         title: 'Superflows',
         logo: {
           alt: 'Superflkows Logo',
-          src: 'img/superflows_black_200.png',
+          src: 'img/superflows_gray_transparent_200.png',
         },
         items: [
           {
