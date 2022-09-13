@@ -75,7 +75,7 @@ const config = {
             position: 'left',
             label: 'Get Started',
           },
-          //{to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/superflows-dev',
             label: 'GitHub',
