@@ -96,6 +96,14 @@ function Apps(props) {
                         <SfInput inputType="dateOfBirth" variant={'secondary'} caption={'Date of Birth'} onComplete={(event) => {console.log('clicked', event);}}/>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <SfInput inputType="date" variant={'primary'} caption={'Date'} onComplete={(event) => {console.log('clicked', event);}}/>
+                    </td>
+                    <td>
+                        <SfInput inputType="date" variant={'secondary'} caption={'Date'} onComplete={(event) => {console.log('clicked', event);}}/>
+                    </td>
+                </tr>
             </tbody>
         </table>
     );
@@ -142,6 +150,14 @@ function Apps(props) {
                         <SfInput inputType="dateOfBirth" variant={'light'} caption={'DoB'} onComplete={(event) => {console.log('clicked', event);}}/>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <SfInput inputType="date" variant={'primary'} caption={'Date'} onComplete={(event) => {console.log('clicked', event);}}/>
+                    </td>
+                    <td>
+                        <SfInput inputType="date" variant={'secondary'} caption={'Date'} onComplete={(event) => {console.log('clicked', event);}}/>
+                    </td>
+                </tr>
             </tbody>
         </table>
     );
@@ -186,6 +202,14 @@ function Apps(props) {
                     </td>
                     <td>
                         <SfInput inputType="dateOfBirth" variant={'dark'} caption={'DoB'} onComplete={(event) => {console.log('clicked', event);}} disabled={true}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <SfInput inputType="date" variant={'primary'} caption={'DoB'} onComplete={(event) => {console.log('clicked', event);}} disabled={true}/>
+                    </td>
+                    <td>
+                        <SfInput inputType="date" variant={'secondary'} caption={'DoB'} onComplete={(event) => {console.log('clicked', event);}} disabled={true}/>
                     </td>
                 </tr>
             </tbody>
@@ -236,6 +260,14 @@ function Apps(props) {
                     </td>
                     <td>
                         <SfInput inputType="dateOfBirth" variant={'light'} caption={'DoB'} onComplete={(event) => {console.log('clicked', event);}} icon={<CalendarEventFill />}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <SfInput inputType="date" variant={'primary'} caption={'Date'} onComplete={(event) => {console.log('clicked', event);}} icon={<CalendarEventFill />}/>
+                    </td>
+                    <td>
+                        <SfInput inputType="date" variant={'secondary'} caption={'Date'} onComplete={(event) => {console.log('clicked', event);}} icon={<CalendarEventFill />}/>
                     </td>
                 </tr>
             </tbody>
@@ -322,6 +354,14 @@ function Apps(props) {
                         <SfInput inputType="dateOfBirth" variant={'light'} caption={'DoB'} onComplete={(event) => {console.log('clicked', event);}} value={{dd: "10", mm: "03", yyyy: "1985"}}/>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <SfInput inputType="date" variant={'primary'} caption={'Date'} onComplete={(event) => {console.log('clicked', event);}} value={{dd: "10", mm: "03", yyyy: "1985"}}/>
+                    </td>
+                    <td>
+                        <SfInput inputType="date" variant={'secondary'} caption={'Date'} onComplete={(event) => {console.log('clicked', event);}} value={{dd: "10", mm: "03", yyyy: "1985"}}/>
+                    </td>
+                </tr>
             </tbody>
         </table>
     );
@@ -366,6 +406,14 @@ function Apps(props) {
                     </td>
                     <td>
                         <SfInput inputType="dateOfBirth" variant={'dark'} caption={'DoB'} onComplete={(event) => {console.log('clicked', event);}} value={{dd: "10", mm: "03", yyyy: "1985"}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style={{backgroundColor: 'black'}}>
+                        <SfInput inputType="date" variant={'primary'} caption={'Date'} onComplete={(event) => {console.log('clicked', event);}} mode="night" value={{dd: "10", mm: "03", yyyy: "1985"}}/>
+                    </td>
+                    <td>
+                        <SfInput inputType="date" variant={'secondary'} caption={'Date'} onComplete={(event) => {console.log('clicked', event);}} value={{dd: "10", mm: "03", yyyy: "1985"}}/>
                     </td>
                 </tr>
             </tbody>
