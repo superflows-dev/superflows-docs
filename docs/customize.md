@@ -75,6 +75,14 @@ Spaces are dimensions, which are intended to be used for spacings, paddings, mar
 | xlg        | 30
 | max        | 35
 
+### Dimensions
+
+Dimensions are default dimensions for certain Superflows components
+
+| Space      | Value  
+|------------|-------------------
+| navHeight  | 50
+
 ## Modes
 
 Modes are:
