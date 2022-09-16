@@ -18,7 +18,6 @@ Types of inputs supported are as follows:
 | gender              | input field for accepting gender
 | date                | input field for accepting date
 | dateOfBirth         | input field for accepting date of birth
-| searchString        | input field for accepting search string
 
 ## Features
 
