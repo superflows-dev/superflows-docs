@@ -14,7 +14,7 @@ function HomepageHeader() {
       <div className="container">
         <p className="hero__subtitle">{siteConfig.title}</p>
         <h1 className="hero__title">{siteConfig.tagline}</h1>
-        <h3 className="hero__subtitle">For your React project</h3>
+        <h3 className="hero__subtitle">For your React serverless project</h3>
         <br /><br />
         <div className={styles.buttons}>
           <Link
