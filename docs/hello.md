@@ -58,4 +58,4 @@ Currently, Superflows is a one-person-driving-everything project. I plan to keep
 
 ### Support
 
-Superflows does not have a dedicated support team right now. However, rest assured that I will personally look into and answer all your queries. To get in touch, use <a href="https://discord.com/channels/1018780901334863873/1018780901334863876">discord</a>. I hang there most of my working hours and would be happy to help. Please note that my working hours are according to the Indian Standard Time (GMT + 05:30).
+Superflows does not have a dedicated support team right now. However, rest assured that I will personally look into and answer all your queries. To get in touch, use <a href="https://discord.com/channels/1018780901334863873/1018780901334863876">discord</a>. I hang there most of my working hours and would be happy to help. Please note that my working hours are according to the Indian Standard Time (GMT + 05:30). Please give me 24 hours on weekdays and 48 hours on weekends to reply back.
