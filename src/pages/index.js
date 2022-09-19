@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Superflows provides you a set of plug and play, reusable and customizable components that you can use to supercharge your React project">
       
       <main>
         <HomepageHeader />

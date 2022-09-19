@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Superflows',
-  tagline: 'Reusablenpm Components',
+  tagline: 'Reusable Components',
   url: 'https://superflows.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -69,7 +69,7 @@ const config = {
       navbar: {
         title: 'Superflows',
         logo: {
-          alt: 'Superflkows Logo',
+          alt: 'Superflows Logo',
           src: 'img/superflows_gray_transparent_200.png',
         },
         items: [
