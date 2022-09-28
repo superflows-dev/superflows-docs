@@ -488,6 +488,25 @@ function Apps(props) {
 }
 ```
 
+### SignIn Caption
+
+You can change the caption of the sign in button as shown below.
+
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+                <SfNav signInCaption="Log In"/>
+            </div>
+        </div>
+    );
+}
+```
+
+
 ### SignIn Callback
 
 You can receive a callback after user presses the sign in button. 
