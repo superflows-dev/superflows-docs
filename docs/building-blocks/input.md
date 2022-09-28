@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Input
 
-The button component is **SfInput**. This building block can be used to accept various types of user inputs.
+The input component is **SfInput**. This building block can be used to accept various types of user inputs.
 
 ## InputType
 

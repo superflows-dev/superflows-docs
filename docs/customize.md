@@ -27,6 +27,7 @@ This package provides default values for:
 - Spaces
 - Modes
 - InputTypes
+- Breakpoints
 
 ### Variants
 
@@ -105,6 +106,17 @@ Input types are types of input accepted from the users in the input field.
 | DateOfBirth     | dateOfBirth
 | Gender          | gender
 | SearchString    | searchString
+
+### Breakpoints
+
+Breakpoints are widths, that are used in responsive design.
+
+| Breakpoint      | Value  
+|-----------------|-------------------
+| mobile          | 480
+| tablet          | 768
+| laptop          | 1024
+| desktop         | 1200
 
 ## Quickstart
 

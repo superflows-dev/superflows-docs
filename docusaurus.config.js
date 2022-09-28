@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Superflows',
-  tagline: 'Reusable Components',
+  tagline: 'Reusable Modules',
   url: 'https://superflows.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
