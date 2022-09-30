@@ -83,6 +83,7 @@ Dimensions are default dimensions for certain Superflows components
 | Space      | Value  
 |------------|-------------------
 | navHeight  | 50
+| menuWidth  | 120
 
 ## Modes
 

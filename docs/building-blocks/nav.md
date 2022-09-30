@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Nav
 
-The button component is **SfNav**. This building block is the navigation bar provided by Superflows.
+The navigation component is **SfNav**. This building block is the navigation bar provided by Superflows.
 
 ## Features
 
@@ -39,54 +39,6 @@ function Apps(props) {
 }
 ```
 
-Before looking at further usage, please go through all the props first.
-
-## Props
-
-| Prop                          | Type           | Mandatory | Description 
-|-------------------------------|----------------|-----------|---------------------------------
-| variant                       | string         | no        | theme variant such as primary, secondary, danger, etc.
-| theme                         | object         | no        | superflows theme object
-| brand                         | string         | no        | brand name 
-| brandLogo                     | img            | no        | brand logo image
-| menu                          | json object    | no        | json object which renders the menu
-| menuIcon                      | icon           | no        | icon for menu  in portrait view
-| optionsIcon                   | icon           | no        | icon for options in portrait view
-| showSearch                    | boolean        | no        | flag, which shows / hides search input
-| showSignIn                    | boolean        | no        | flag, which shows / hides sign in button
-| searchCaption                 | string         | no        | caption of the search input
-| signInCaption                 | string         | no        | caption of the sign in button
-| searchIcon                    | object         | no        | icon for the search input
-| stylesBrand                   | json object    | no        | styles object to customize the brand name
-| stylesBrandLogo               | json object    | no        | styles object to customize the brand logo
-| stylesMenu                    | json object    | no        | styles object to customize the menu
-| stylesSubMenu                 | json object    | no        | styles object to customize the sub menu
-| stylesMenuMobile              | json object    | no        | styles object to customize the mobile menu
-| stylesSubMenuMobile           | json object    | no        | styles object to customize the mobile sub menu
-| stylesMenuMobileSelected      | json object    | no        | styles object to customize the selected mobile menu
-| stylesSignIn                  | json object    | no        | styles object to customize the sign in button
-| stylesSearchContainer         | json object    | no        | styles object to customize the search input container
-| stylesSearchInput             | json object    | no        | styles object to customize the search input
-| stylesContainerDesktop        | json object    | no        | styles object to customize the nav container for landscape view
-| stylesContainerMobile         | json object    | no        | styles object to customize the nav container for portrait view
-| stylesContainerRightMenu      | json object    | no        | styles object to customize the right menu container for portrait view
-| classNameBrand                | json object    | no        | class names string to customize the brand name
-| classNameBrandLogo            | json object    | no        | class names string to customize the brand logo
-| classNameSignIn               | json object    | no        | class names string to customize the sign in button
-| classNameMenu                 | json object    | no        | class names string to customize the menu
-| classNameSubMenu              | json object    | no        | class names string to customize the sub menu
-| classNameMenuMobile           | json object    | no        | class names string to customize the mobile menu
-| classNameSubMenuMobile        | json object    | no        | class names string to customize the mobile sub menu
-| classNameMenuMobileSelected   | json object    | no        | class names string to customize the selected mobile menu
-| classNameSearchContainer      | json object    | no        | class names string to customize the search input container
-| classNameSearchInput          | json object    | no        | class names string to customize the search input
-| classNameContainerDesktop     | json object    | no        | class names string to customize the nav container for landscape view
-| classNameContainerMobile      | json object    | no        | class names string to customize the nav container for portrait view
-| classNameContainerRightMenu   | json object    | no        | class names string to customize the right menu container for portrait view
-| onHomePressed                 | callback       | no        | callback after clicking on home button 
-| onSearchPressed               | callback       | no        | callback after search text is entered
-| onSignInPressed               | callback       | no        | callback after clicking on sign in button
-| onMenuClicked                 | callback       | no        | callback after clicking on any menu
 
 ## Variants
 
@@ -547,3 +499,268 @@ function Apps(props) {
     );
 }
 ```
+
+## Profile
+
+### Anatomy
+
+Profile section has the following customizable elements
+- Profile Picture
+- Profile Menu
+- Profile Preamble
+- Profile Component
+
+Profile picture is highlighed below. Click on the profile picture. Profile Menu will dropdown. Profile Preamble and Profile Component are two locations, where you can insert custom components. Let us go through them in subsequent sections.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+                <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' stylesProfilePicture={{border: 'solid 3px red'}} />
+            </div>
+        </div>
+    );
+}
+```
+
+### Customize The Menu
+
+You can customize the profile menu by using the profileMenu prop as shown below. Pass a json object in the format shown below to the profileMenu prop and the profile drop down menu will get populated accordingly.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+                <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' />
+            </div>
+        </div>
+    );
+}
+```
+
+### Extend The Functionality: Profile Preamble
+
+You can insert a custom component just before the drop down menu. Look at the example below. A custom component is passed to the profilePreamble prop.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+                <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' profilePreamble={<div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Hi Hrushi!</small><br /><small><small><i>Welcome to Superflows!</i></small></small></div>}  />
+            </div>
+        </div>
+    );
+}
+```
+
+### Extend The Functionality: Profile Component
+
+You can insert a custom component just after the drop down menu. Look at the example below. A custom component is passed to the profileComponent prop.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+                <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' profileComponent={<div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Sign Out</small></div>}   />
+            </div>
+        </div>
+    );
+}
+```
+
+### Advanced Customization
+
+If you are interested in obtaining complete control over the look and feel, you already have it. You can completely override the base css properties of the profile picture, picture container and the menu. Profile preamble and profile component are anyways custom components.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+                <SfNav 
+                showSignIn={false} 
+                      showProfile={true} 
+                      profileMenu={
+                        [{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]
+                      } 
+                      profilePreamble={
+                        <div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Hi Hrushi!</small><br /><small><small><i>Welcome to Superflows!</i></small></small></div>
+                      } 
+                      profileComponent={
+                        <div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Sign Out</small></div>
+                      } 
+                      profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' 
+                      stylesProfilePictureContainer={
+                        {backgroundColor: 'black', padding: '2px', color: 'white', borderRadius: '5px'}
+                      } 
+                      stylesProfilePreamble={
+                        {backgroundColor: 'white', color: 'black'}} stylesProfileComponent={{backgroundColor: 'white', color: 'black'}
+                      } 
+                      stylesMenu={
+                        {backgroundColor: 'black', color: 'white', paddingTop: '3px', paddingBottom: '3px', paddingLeft: '10px', paddingRight: '10px', borderRadius: '5px'}
+                      } 
+                      stylesSubMenu={
+                        {backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', border: 'solid 1px gray'}
+                      }
+                      stylesMenuMobile={
+                        {backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}
+                      }
+                      stylesMenuMobileSelected={
+                        {backgroundColor: 'white', color: 'black', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}
+                      }
+                      stylesSubMenuMobile={
+                        {backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}
+                      }
+                />
+            </div>
+        </div>
+    );
+}
+```
+
+## Example Scenarios
+
+### Night Mode
+
+- Use the light variant
+- Container will have a dark background
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div style={{paddingBottom: '20px', paddingTop: '20px', backgroundColor: 'black'}}>
+                <SfNav variant="light"/>
+            </div>
+        </div>
+    );
+}
+```
+
+### Sign In / Registered User (but not subscribed)
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+                <SfNav 
+                    showSignIn={true}
+                    signInCaption="Subscribe Now"
+                    menu={
+                        [[{caption: "Watch", link: "watch"}, {caption: "TV Shows", link: "tv"}, {caption: "Movies", link: "movies"}]]
+                    } 
+                    showProfile={true} 
+                    profileMenu={
+                    [{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]
+                    } 
+                    profilePreamble={
+                    <div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Hi Hrushi!</small><br /><div style={{lineHeight: '100%'}}><small><small><i>Welcome to Superflows!</i></small></small></div></div>
+                    } 
+                    profileComponent={
+                    <div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Sign Out</small></div>
+                    } 
+                    profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' 
+                />
+            </div>
+        </div>
+    );
+}
+```
+
+### Sign In / Registered User & Subscribed
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+                <SfNav 
+                    showSignIn={false}
+                    menu={
+                        [[{caption: "Watch", link: "watch"}, {caption: "TV Shows", link: "tv"}, {caption: "Movies", link: "movies"}]]
+                    } 
+                    showProfile={true} 
+                    profileMenu={
+                    [{caption: "Profile", link: "profile"}, {caption: "Membership", link: "membership"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]
+                    } 
+                    profilePreamble={
+                    <div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Hi Hrushi!</small><br /><div style={{lineHeight: '100%'}}><small><small><i>Welcome to Superflows!</i></small></small></div><div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}><div style={{marginTop: '10px', marginBottom: '5px', width: '100%', textAlign: 'center',fontSize: '80%', paddingLeft: '5px', paddingRight: '5px', paddingTop: '3px', paddingBottom: '3px', backgroundColor: 'white', borderRadius: '10px'}}>Premium</div></div></div>
+                    } 
+                    profileComponent={
+                    <div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Sign Out</small></div>
+                    } 
+                    profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' 
+                />
+            </div>
+        </div>
+    );
+}
+```
+
+
+## Props
+
+| Prop                          | Type           | Mandatory | Description 
+|-------------------------------|----------------|-----------|---------------------------------
+| variant                       | string         | no        | theme variant such as primary, secondary, danger, etc.
+| theme                         | object         | no        | superflows theme object
+| brand                         | string         | no        | brand name 
+| brandLogo                     | img            | no        | brand logo image
+| menu                          | json object    | no        | json object which renders the menu
+| menuIcon                      | icon           | no        | icon for menu  in portrait view
+| optionsIcon                   | icon           | no        | icon for options in portrait view
+| showSearch                    | boolean        | no        | flag, which shows / hides search input
+| showSignIn                    | boolean        | no        | flag, which shows / hides sign in button
+| searchCaption                 | string         | no        | caption of the search input
+| signInCaption                 | string         | no        | caption of the sign in button
+| searchIcon                    | object         | no        | icon for the search input
+| stylesBrand                   | json object    | no        | styles object to customize the brand name
+| stylesBrandLogo               | json object    | no        | styles object to customize the brand logo
+| stylesMenu                    | json object    | no        | styles object to customize the menu
+| stylesSubMenu                 | json object    | no        | styles object to customize the sub menu
+| stylesMenuMobile              | json object    | no        | styles object to customize the mobile menu
+| stylesSubMenuMobile           | json object    | no        | styles object to customize the mobile sub menu
+| stylesMenuMobileSelected      | json object    | no        | styles object to customize the selected mobile menu
+| stylesSignIn                  | json object    | no        | styles object to customize the sign in button
+| stylesSearchContainer         | json object    | no        | styles object to customize the search input container
+| stylesSearchInput             | json object    | no        | styles object to customize the search input
+| stylesContainerDesktop        | json object    | no        | styles object to customize the nav container for landscape view
+| stylesContainerMobile         | json object    | no        | styles object to customize the nav container for portrait view
+| stylesContainerRightMenu      | json object    | no        | styles object to customize the right menu container for portrait view
+| stylesProfilePicture          | json object    | no        | styles object to customize the profile picture
+| stylesProfilePreamble         | json object    | no        | styles object to customize the profile preamble
+| stylesProfileComponent        | json object    | no        | styles object to customize the profile component
+| classNameBrand                | json object    | no        | class names string to customize the brand name
+| classNameBrandLogo            | json object    | no        | class names string to customize the brand logo
+| classNameSignIn               | json object    | no        | class names string to customize the sign in button
+| classNameMenu                 | json object    | no        | class names string to customize the menu
+| classNameSubMenu              | json object    | no        | class names string to customize the sub menu
+| classNameMenuMobile           | json object    | no        | class names string to customize the mobile menu
+| classNameSubMenuMobile        | json object    | no        | class names string to customize the mobile sub menu
+| classNameMenuMobileSelected   | json object    | no        | class names string to customize the selected mobile menu
+| classNameSearchContainer      | json object    | no        | class names string to customize the search input container
+| classNameSearchInput          | json object    | no        | class names string to customize the search input
+| classNameContainerDesktop     | json object    | no        | class names string to customize the nav container for landscape view
+| classNameContainerMobile      | json object    | no        | class names string to customize the nav container for portrait view
+| classNameContainerRightMenu   | json object    | no        | class names string to customize the right menu container for portrait view
+| classNameProfilePicture       | json object    | no        | class names string to customize the profile picture
+| classNameProfilePreamble      | json object    | no        | class names string to customize the profile preamble
+| classNameProfileComponent     | json object    | no        | class names string to customize the profile component
+| onHomePressed                 | callback       | no        | callback after clicking on home button 
+| onSearchPressed               | callback       | no        | callback after search text is entered
+| onSignInPressed               | callback       | no        | callback after clicking on sign in button
+| onMenuClicked                 | callback       | no        | callback after clicking on any menu
+
