@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Before You Begin
 
-For customizing the building blocks, react-sf-themes package is used. Install it.
+For customizing the building blocks, react-sf-themes package is used. Install it, if you haven't already.
 
 ```bash
 npm install --save react-sf-themes

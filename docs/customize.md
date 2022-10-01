@@ -1,9 +1,9 @@
 ---
-sidebar_label: 'Globals & Customization'
-sidebar_position: 2
+sidebar_label: 'Theme & Customization'
+sidebar_position: 3
 ---
 
-# Globals & Customization
+# Theme & Customization
 
 Let us start by learning about the most basic package - react-sf-themes. Use the react-sf-themes package to access the global configuration and the default theme provided by Superflows.
 
