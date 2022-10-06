@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Nav
+# Navigation
 
 The navigation component is **SfNav**. This building block is the navigation bar provided by Superflows.
 
@@ -724,9 +724,11 @@ function Apps(props) {
 | brandLogo                     | img            | no        | brand logo image
 | menu                          | json object    | no        | json object which renders the menu
 | menuIcon                      | icon           | no        | icon for menu  in portrait view
+| backIcon                      | icon           | no        | icon for back button
 | optionsIcon                   | icon           | no        | icon for options in portrait view
 | showSearch                    | boolean        | no        | flag, which shows / hides search input
 | showSignIn                    | boolean        | no        | flag, which shows / hides sign in button
+| showBack                      | boolean        | no        | flag, which shows / hides back button
 | searchCaption                 | string         | no        | caption of the search input
 | signInCaption                 | string         | no        | caption of the sign in button
 | searchIcon                    | object         | no        | icon for the search input
@@ -762,6 +764,7 @@ function Apps(props) {
 | classNameProfilePicture       | json object    | no        | class names string to customize the profile picture
 | classNameProfilePreamble      | json object    | no        | class names string to customize the profile preamble
 | classNameProfileComponent     | json object    | no        | class names string to customize the profile component
+| onBackPressed                 | callback       | no        | callback after the back button is pressed
 | onHomePressed                 | callback       | no        | callback after clicking on home button 
 | onSearchPressed               | callback       | no        | callback after search text is entered
 | onSignInPressed               | callback       | no        | callback after clicking on sign in button

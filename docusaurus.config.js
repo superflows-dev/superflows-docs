@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/superflows_gray_200.ico',
+  favicon: 'img/superflows_gray_transparent_200.png',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.

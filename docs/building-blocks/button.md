@@ -6,20 +6,6 @@ sidebar_position: 4
 
 The button component is **SfButton**.
 
-## Props
-
-| Prop          | Type           | Mandatory | Description 
-|---------------|----------------|-----------|---------------------------------
-| variant       | string         | yes       | theme variant such as primary, secondary, danger, etc.
-| type          | string         | yes       | theme type such as filled or outlined
-| caption       | string         | yes       | button text
-| onClick       | callback       | yes       | onClick callback function
-| disabled      | boolean        | no        | flag to disable the button
-| theme         | object         | no        | superflows theme object
-| icon          | object         | no        | bootstrap icon to be shown after the text
-| className     | string         | no        | any classes that need to passed
-| styles        | string         | no        | any styles that need to passed
-
 ## Usage
 
 ### Imports
@@ -167,3 +153,18 @@ function Apps(props) {
     );
 }
 ```
+
+## Props
+
+| Prop          | Type           | Mandatory | Description 
+|---------------|----------------|-----------|---------------------------------
+| variant       | string         | yes       | theme variant such as primary, secondary, danger, etc.
+| type          | string         | yes       | theme type such as filled or outlined
+| caption       | string         | yes       | button text
+| onClick       | callback       | yes       | onClick callback function
+| disabled      | boolean        | no        | flag to disable the button
+| theme         | object         | no        | superflows theme object
+| icon          | object         | no        | bootstrap icon to be shown after the text
+| className     | string         | no        | any classes that need to passed
+| styles        | string         | no        | any styles that need to passed
+
