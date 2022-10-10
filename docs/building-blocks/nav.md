@@ -28,6 +28,10 @@ import {SfNav} from 'react-sf-building-blocks'
 
 Basic usage is straight forward. Simply import it and use it without any props. The navigation bar will render with the default props. Please note that the navigation bar is responsive. If you are viewing this documentation on a desktop or laptop, you will see the desktop version. Open the documentation on your mobile device to view the mobile version.
 
+<iframe width="380" height="220" src="https://www.youtube.com/embed/J2jJO9_EtUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br /><br />
+
 ```jsx live
 function Apps(props) {
   
@@ -178,6 +182,12 @@ function Apps(props) {
 }
 ```
 
+### Video Tutorial
+
+<iframe width="380" height="220" src="https://www.youtube.com/embed/cT9g195G59Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
+
 ## Menu
 
 ### Anatomy
@@ -268,6 +278,13 @@ function Apps(props) {
     );
 }
 ```
+
+### Video Tutorial
+
+<iframe width="380" height="220" src="https://www.youtube.com/embed/h-wR_oLW60U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
+
 
 ## Search
 
