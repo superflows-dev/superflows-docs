@@ -30,5 +30,5 @@ npm install --save react-sf-building-blocks
 After you are have installed the above mentioned packages, you will have access to basic functionality. To know more about it, refer to the respective documentation:
 
 - react-sf-themes ([Docs](./customize.md))
-- react-sf-building-blocks ([Docs](./building-blocks/))
+- react-sf-building-blocks ([Docs](./category/building-blocks/))
 

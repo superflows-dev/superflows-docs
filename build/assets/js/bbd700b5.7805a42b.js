@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[818],{6141:e=>{e.exports=JSON.parse('{"label":"continuous delivery","permalink":"/blog/tags/continuous-delivery","allTagsPath":"/blog/tags","count":1}')}}]);
