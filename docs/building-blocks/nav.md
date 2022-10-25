@@ -72,10 +72,10 @@ function Apps(props) {
                 <SfNav variant="info"/>
             </div>
             <div style={{paddingBottom: '20px', paddingTop: '20px', backgroundColor: 'gray'}}>
-                <SfNav variant="light"/>
+                <SfNav variant="dark"/>
             </div>
             <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav variant="dark"/>
+                <SfNav variant="light"/>
             </div>
         </div>
     );
@@ -657,7 +657,7 @@ function Apps(props) {
     return (
         <div>
             <div style={{paddingBottom: '20px', paddingTop: '20px', backgroundColor: 'black'}}>
-                <SfNav variant="light"/>
+                <SfNav variant="dark"/>
             </div>
         </div>
     );
