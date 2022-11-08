@@ -79,7 +79,8 @@ const config = {
             position: 'left',
             label: 'Get Started',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: 'https://blog.superflows.dev', label: 'Blog', position: 'left'},
+          {to: 'https://www.youtube.com/channel/UCYNJLCE48yir4DsquciBuDw', label: 'Videos', position: 'left'},
           {
             href: 'https://github.com/superflows-dev',
             label: 'GitHub',
