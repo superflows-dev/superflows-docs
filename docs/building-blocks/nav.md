@@ -240,10 +240,6 @@ function Apps(props) {
 
 You can receive a callback after user presses any menu. Callback returns the menu link.
 
-```jsx
-import {Search} from 'react-bootstrap-icons';
-```
-
 ```jsx live
 function Apps(props) {
   
@@ -607,6 +603,25 @@ function Apps(props) {
     );
 }
 ```
+
+### Menu Callback
+
+You can receive a callback after user presses any profile menu. Callback returns the menu link.
+
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+                <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' onMenuClicked={(value) => {alert(value)}}/>
+            </div>
+        </div>
+    );
+}
+```
+
 
 ### Advanced Customization
 
