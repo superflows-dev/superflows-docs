@@ -681,6 +681,104 @@ function Apps(props) {
 
 <br />
 
+## Back
+
+### Anatomy
+
+Back section has the following customizable elements
+- Back Button
+
+Back button is highlighed below. Back button is usually required on inner screens / pages, where back navigation functionality is required
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div>
+                <SfNav showBack={true} menu={[]} showSearch={false} showSignIn={false} stylesBack={{border: 'solid 3px red'}} />
+            </div>
+        </div>
+    );
+}
+```
+
+### Show / Hide the Back button
+
+By default, the menu button is shown and the back button is not shown. To show the back button, set the showBack prop to true. Please note that after the back button is displayed, the menu button is not shown. Only one of these two buttons can be shown at one time. Usually the back button on the navbar will be required on the inner screens, where the menu, search and sign in button may also not be required. You can remove them as well. 
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div>
+                <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} />
+            </div>
+        </div>
+    );
+}
+```
+
+
+### Back Callback
+
+You can receive a callback after user presses the back button, after subscribing to the onBackPressed prop.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div>
+                <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} />
+            </div>
+        </div>
+    );
+}
+```
+
+### Back Icon
+
+You can change the back icon by passing your own icon object to the backIcon prop. This example uses an icon from the React Bootstrap icon library. You can use any other icon library as well.
+
+```jsx
+import {ArrowLeft} from 'react-bootstrap-icons'
+```
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div>
+                <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} backIcon={<ArrowLeft style={{paddingTop: '5px'}} />}/>
+            </div>
+        </div>
+    );
+}
+```
+
+### Advanced Customization
+
+If you are interested in obtaining complete control over the look and feel, you already have it. You can completely override the base css properties of the back icon. An example is show below:
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <div>
+                <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} stylesBack={{backgroundColor: 'black', color: 'white', padding: '0px', width: '20px', height: '20px', textAlign: 'center', lineHeight: '1.1', borderRadius: '10px', marginRight: '10px'}} />
+            </div>
+        </div>
+    );
+}
+```
+
+### Video Tutorial
+
+<br />
 
 ## Example Scenarios
 
@@ -803,22 +901,24 @@ function Apps(props) {
 | stylesProfilePicture          | json object    | no        | styles object to customize the profile picture
 | stylesProfilePreamble         | json object    | no        | styles object to customize the profile preamble
 | stylesProfileComponent        | json object    | no        | styles object to customize the profile component
-| classNameBrand                | json object    | no        | class names string to customize the brand name
-| classNameBrandLogo            | json object    | no        | class names string to customize the brand logo
-| classNameSignIn               | json object    | no        | class names string to customize the sign in button
-| classNameMenu                 | json object    | no        | class names string to customize the menu
-| classNameSubMenu              | json object    | no        | class names string to customize the sub menu
-| classNameMenuMobile           | json object    | no        | class names string to customize the mobile menu
-| classNameSubMenuMobile        | json object    | no        | class names string to customize the mobile sub menu
-| classNameMenuMobileSelected   | json object    | no        | class names string to customize the selected mobile menu
-| classNameSearchContainer      | json object    | no        | class names string to customize the search input container
-| classNameSearchInput          | json object    | no        | class names string to customize the search input
-| classNameContainerDesktop     | json object    | no        | class names string to customize the nav container for landscape view
-| classNameContainerMobile      | json object    | no        | class names string to customize the nav container for portrait view
-| classNameContainerRightMenu   | json object    | no        | class names string to customize the right menu container for portrait view
-| classNameProfilePicture       | json object    | no        | class names string to customize the profile picture
-| classNameProfilePreamble      | json object    | no        | class names string to customize the profile preamble
-| classNameProfileComponent     | json object    | no        | class names string to customize the profile component
+| stylesBack                    | json object    | no        | styles object to customize the back button
+| classNameBrand                | string         | no        | class names string to customize the brand name
+| classNameBrandLogo            | string         | no        | class names string to customize the brand logo
+| classNameSignIn               | string         | no        | class names string to customize the sign in button
+| classNameMenu                 | string         | no        | class names string to customize the menu
+| classNameSubMenu              | string         | no        | class names string to customize the sub menu
+| classNameMenuMobile           | string         | no        | class names string to customize the mobile menu
+| classNameSubMenuMobile        | string         | no        | class names string to customize the mobile sub menu
+| classNameMenuMobileSelected   | string         | no        | class names string to customize the selected mobile menu
+| classNameSearchContainer      | string         | no        | class names string to customize the search input container
+| classNameSearchInput          | string         | no        | class names string to customize the search input
+| classNameContainerDesktop     | string         | no        | class names string to customize the nav container for landscape view
+| classNameContainerMobile      | string         | no        | class names string to customize the nav container for portrait view
+| classNameContainerRightMenu   | string         | no        | class names string to customize the right menu container for portrait view
+| classNameProfilePicture       | string         | no        | class names string to customize the profile picture
+| classNameProfilePreamble      | string         | no        | class names string to customize the profile preamble
+| classNameProfileComponent     | string         | no        | class names string to customize the profile component
+| classNameBack                 | string         | no        | class names string to customize the profile component
 | onBackPressed                 | callback       | no        | callback after the back button is pressed
 | onHomePressed                 | callback       | no        | callback after clicking on home button 
 | onSearchPressed               | callback       | no        | callback after search text is entered
