@@ -96,10 +96,8 @@ They are highlighed below.
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav brandLogo="https://superflows.dev/img/superflows_gray_transparent_200.png" stylesBrand={{border: 'solid 3px red'}} stylesBrandLogo={{border: 'solid 3px red'}}/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav brandLogo="https://superflows.dev/img/superflows_gray_transparent_200.png" stylesBrand={{border: 'solid 3px red'}} stylesBrandLogo={{border: 'solid 3px red'}}/>
         </div>
     );
 }
@@ -113,10 +111,8 @@ You can change the brand name as shown below.
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav brand="Your Brand"/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav brand="Your Brand"/>
         </div>
     );
 }
@@ -202,15 +198,13 @@ They are highlighed below.
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav 
-                    stylesMenu={{border: 'solid 3px red'}} 
-                    stylesSubMenu={{border: 'solid 3px red'}}
-                    stylesMenuMobile={{border: 'solid 3px red'}}
-                    stylesMenuMobileSelected={{border: 'solid 3px red'}}
-                    stylesSubMenuMobile={{border: 'solid 3px red'}}/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav 
+                stylesMenu={{border: 'solid 3px red'}} 
+                stylesSubMenu={{border: 'solid 3px red'}}
+                stylesMenuMobile={{border: 'solid 3px red'}}
+                stylesMenuMobileSelected={{border: 'solid 3px red'}}
+                stylesSubMenuMobile={{border: 'solid 3px red'}}/>
         </div>
     );
 }
@@ -244,10 +238,8 @@ You can receive a callback after user presses any menu. Callback returns the men
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav onMenuClicked={(value) => {alert(value)}}/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav onMenuClicked={(value) => {alert(value)}}/>
         </div>
     );
 }
@@ -261,15 +253,13 @@ If you are interested in obtaining complete control over the look and feel, you 
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav 
-                    stylesMenu={{backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px'}} 
-                    stylesSubMenu={{backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', border: 'solid 1px gray'}}
-                    stylesMenuMobile={{backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}}
-                    stylesMenuMobileSelected={{backgroundColor: 'white', color: 'black', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}}
-                    stylesSubMenuMobile={{backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}}/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav 
+                stylesMenu={{backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px'}} 
+                stylesSubMenu={{backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', border: 'solid 1px gray'}}
+                stylesMenuMobile={{backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}}
+                stylesMenuMobileSelected={{backgroundColor: 'white', color: 'black', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}}
+                stylesSubMenuMobile={{backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}}/>
         </div>
     );
 }
@@ -297,11 +287,9 @@ They are highlighed below.
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav 
-                    stylesSearchContainer={{border: 'solid 3px red'}} />
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav 
+                stylesSearchContainer={{border: 'solid 3px red'}} />
         </div>
     );
 }
@@ -336,10 +324,8 @@ You can change the search caption as shown below.
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav searchCaption="Find"/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav searchCaption="Find"/>
         </div>
     );
 }
@@ -381,10 +367,8 @@ import {Search} from 'react-bootstrap-icons';
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav onSearchPressed={(value) => {alert(value)}}/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav onSearchPressed={(value) => {alert(value)}}/>
         </div>
     );
 }
@@ -398,13 +382,11 @@ If you are interested in obtaining complete control over the look and feel, you 
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav 
-                    stylesSearchContainer={{backgroundColor: 'black', color: 'white', border: 'solid 1px gray'}}
-                    stylesSearchInput={{backgroundColor: '#444', borderRadius: '10px', color: '#efefef', paddingTop: '5px', paddingBottom: '5px'}}
-                    />
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav 
+                stylesSearchContainer={{backgroundColor: 'black', color: 'white', border: 'solid 1px gray'}}
+                stylesSearchInput={{backgroundColor: '#444', borderRadius: '10px', color: '#efefef', paddingTop: '5px', paddingBottom: '5px'}}
+                />
         </div>
     );
 }
@@ -430,10 +412,8 @@ They are highlighed below.
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav stylesSignIn={{border: 'solid 3px red'}}/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav stylesSignIn={{border: 'solid 3px red'}}/>
         </div>
     );
 }
@@ -469,10 +449,8 @@ You can change the caption of the sign in button as shown below.
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav signInCaption="Log In"/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav signInCaption="Log In"/>
         </div>
     );
 }
@@ -491,10 +469,8 @@ import {Search} from 'react-bootstrap-icons';
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav onSignInPressed={() => {alert('Sign in pressed!')}}/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav onSignInPressed={() => {alert('Sign in pressed!')}}/>
         </div>
     );
 }
@@ -509,12 +485,10 @@ If you are interested in obtaining complete control over the look and feel, you 
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav 
-                    stylesSignIn={{backgroundColor: 'black', color: 'white', border: 'solid 1px gray'}}
-                    />
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav 
+                stylesSignIn={{backgroundColor: 'black', color: 'white', border: 'solid 1px gray'}}
+                />
         </div>
     );
 }
@@ -544,10 +518,8 @@ Profile picture is highlighed below. Click on the profile picture. Profile Menu 
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' stylesProfilePicture={{border: 'solid 3px red'}} />
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' stylesProfilePicture={{border: 'solid 3px red'}} />
         </div>
     );
 }
@@ -561,10 +533,8 @@ You can customize the profile menu by using the profileMenu prop as shown below.
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' onMenuClicked={(link) => {alert(link)}}/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' onMenuClicked={(link) => {alert(link)}}/>
         </div>
     );
 }
@@ -578,10 +548,8 @@ You can insert a custom component just before the drop down menu. Look at the ex
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' profilePreamble={<div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Hi Hrushi!</small><br /><small><small><i>Welcome to Superflows!</i></small></small></div>}  />
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' profilePreamble={<div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Hi Hrushi!</small><br /><small><small><i>Welcome to Superflows!</i></small></small></div>}  />
         </div>
     );
 }
@@ -595,11 +563,11 @@ You can insert a custom component just after the drop down menu. Look at the exa
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' profileComponent={<div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Sign Out</small></div>}   />
-            </div>
+
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' profileComponent={<div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Sign Out</small></div>}   />
         </div>
+
     );
 }
 ```
@@ -613,10 +581,8 @@ You can receive a callback after user presses any profile menu. Callback returns
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' onMenuClicked={(value) => {alert(value)}}/>
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav showProfile={true} showSignIn={false} profileMenu={[{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]} profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' onMenuClicked={(value) => {alert(value)}}/>
         </div>
     );
 }
@@ -631,44 +597,42 @@ If you are interested in obtaining complete control over the look and feel, you 
 function Apps(props) {
   
     return (
-        <div>
-            <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
-                <SfNav 
-                showSignIn={false} 
-                      showProfile={true} 
-                      profileMenu={
-                        [{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]
-                      } 
-                      profilePreamble={
-                        <div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Hi Hrushi!</small><br /><small><small><i>Welcome to Superflows!</i></small></small></div>
-                      } 
-                      profileComponent={
-                        <div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Sign Out</small></div>
-                      } 
-                      profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' 
-                      stylesProfilePictureContainer={
-                        {backgroundColor: 'black', padding: '2px', color: 'white', borderRadius: '5px'}
-                      } 
-                      stylesProfilePreamble={
-                        {backgroundColor: 'white', color: 'black'}} stylesProfileComponent={{backgroundColor: 'white', color: 'black'}
-                      } 
-                      stylesMenu={
-                        {backgroundColor: 'black', color: 'white', paddingTop: '3px', paddingBottom: '3px', paddingLeft: '10px', paddingRight: '10px', borderRadius: '5px'}
-                      } 
-                      stylesSubMenu={
-                        {backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', border: 'solid 1px gray'}
-                      }
-                      stylesMenuMobile={
-                        {backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}
-                      }
-                      stylesMenuMobileSelected={
-                        {backgroundColor: 'white', color: 'black', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}
-                      }
-                      stylesSubMenuMobile={
-                        {backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}
-                      }
-                />
-            </div>
+        <div style={{paddingBottom: '20px', paddingTop: '20px'}}>
+            <SfNav 
+            showSignIn={false} 
+                    showProfile={true} 
+                    profileMenu={
+                    [{caption: "Profile", link: "profile"}, [{caption: "Settings", link: "support"}, {caption: "Notifications", link: "notifications"}, {caption: "Privacy", link: "privacy"}], {caption: "Support", link: "support"}, {caption: 'Upgrade', link: "upgrade"}]
+                    } 
+                    profilePreamble={
+                    <div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Hi Hrushi!</small><br /><small><small><i>Welcome to Superflows!</i></small></small></div>
+                    } 
+                    profileComponent={
+                    <div style={{width: '100%', paddingTop: '10px', paddingBottom: '10px', paddingLeft: '10px', paddingRight: '10px'}}><small>Sign Out</small></div>
+                    } 
+                    profilePicture='https://i.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4--free-avatars-online-profile.jpg' 
+                    stylesProfilePictureContainer={
+                    {backgroundColor: 'black', padding: '2px', color: 'white', borderRadius: '5px'}
+                    } 
+                    stylesProfilePreamble={
+                    {backgroundColor: 'white', color: 'black'}} stylesProfileComponent={{backgroundColor: 'white', color: 'black'}
+                    } 
+                    stylesMenu={
+                    {backgroundColor: 'black', color: 'white', paddingTop: '3px', paddingBottom: '3px', paddingLeft: '10px', paddingRight: '10px', borderRadius: '5px'}
+                    } 
+                    stylesSubMenu={
+                    {backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', border: 'solid 1px gray'}
+                    }
+                    stylesMenuMobile={
+                    {backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}
+                    }
+                    stylesMenuMobileSelected={
+                    {backgroundColor: 'white', color: 'black', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}
+                    }
+                    stylesSubMenuMobile={
+                    {backgroundColor: 'black', color: 'white', paddingLeft: '5px', paddingRight: '5px', borderRadius: '5px', border: 'solid 1px gray'}
+                    }
+            />
         </div>
     );
 }
@@ -695,9 +659,7 @@ function Apps(props) {
   
     return (
         <div>
-            <div>
-                <SfNav showBack={true} menu={[]} showSearch={false} showSignIn={false} stylesBack={{border: 'solid 3px red'}} />
-            </div>
+            <SfNav showBack={true} menu={[]} showSearch={false} showSignIn={false} stylesBack={{border: 'solid 3px red'}} />
         </div>
     );
 }
@@ -712,9 +674,7 @@ function Apps(props) {
   
     return (
         <div>
-            <div>
-                <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} />
-            </div>
+            <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} />
         </div>
     );
 }
@@ -730,9 +690,7 @@ function Apps(props) {
   
     return (
         <div>
-            <div>
-                <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} />
-            </div>
+            <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} />
         </div>
     );
 }
@@ -751,9 +709,7 @@ function Apps(props) {
   
     return (
         <div>
-            <div>
-                <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} backIcon={<ArrowLeft style={{paddingTop: '5px'}} />}/>
-            </div>
+            <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} backIcon={<ArrowLeft style={{paddingTop: '5px'}} />}/>
         </div>
     );
 }
@@ -768,9 +724,7 @@ function Apps(props) {
   
     return (
         <div>
-            <div>
-                <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} stylesBack={{backgroundColor: 'black', color: 'white', padding: '0px', width: '20px', height: '20px', textAlign: 'center', lineHeight: '1.1', borderRadius: '10px', marginRight: '10px'}} />
-            </div>
+            <SfNav showBack={true} onBackPressed={() => {alert('back pressed');}} menu={[]} showSearch={false} showSignIn={false} stylesBack={{backgroundColor: 'black', color: 'white', padding: '0px', width: '20px', height: '20px', textAlign: 'center', lineHeight: '1.1', borderRadius: '10px', marginRight: '10px'}} />
         </div>
     );
 }
@@ -781,6 +735,156 @@ function Apps(props) {
 <iframe width="380" height="220" src="https://www.youtube.com/embed/r8VIwvYWOCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br />
+
+## Notifications
+
+### Anatomy
+
+Notifications section is composed of the following customizable elements
+- Bell
+- Notification List
+- View All Button
+
+All of these components are highlighted below:
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showNotification={true} notificationList={[
+                {id: 1, title: "First one!", description: 'This is the description of the firs notification.', timestampReceived: "2 days ago", read: false},
+                {id: 2, title: "2nd notification", description: 'Displaying notifications is super simple!', timestampReceived: "5 days ago", read: true},
+                {id: 3, title: "Get started now", description: 'Create the notification list using a simple JSON array and your job is done.', timestampReceived: "1 month ago", read: false}]} stylesNotificationIcon={{border: 'solid 3px red'}} stylesNotificationListContainer={{border: 'solid 3px red'}} stylesNotificationViewAll={{border: 'solid 3px red'}}/>
+        </div>
+    );
+}
+```
+
+### Show / Hide Notifications
+
+By default notifications are visible. To show them, set the showNotification prop to true.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav />
+            <br />
+            <SfNav showNotification={true}/>
+        </div>
+    );
+}
+```
+
+### Bell Icon
+
+The default bell icon is from the unicode character set. You can use any icon and icon library of your choice. To change the bell icon, pass your icon object to the notificationIcon prop.
+
+```jsx
+import {Bell} from 'react-bootstrap-icons';
+```
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showNotification={true} notificationList={[
+                {id: 1, title: "First one!", description: 'This is the description of the firs notification.', timestampReceived: "2 days ago", read: false},
+                {id: 2, title: "2nd notification", description: 'Displaying notifications is super simple!', timestampReceived: "5 days ago", read: true},
+                {id: 3, title: "Get started now", description: 'Create the notification list using a simple JSON array and your job is done.', timestampReceived: "1 month ago", read: false}]} notificationIcon={<Bell style={{marginTop: '5px'}}/>} />
+        </div>
+    );
+}
+```
+
+### Notification List
+
+The notification list can be customized by passing a json array to the notificationList prop. Look at the example below.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showNotification={true} notificationList={[
+                {id: 1, title: "New Follower!", description: 'Ram Joshi has started following you', timestampReceived: "2 days ago", read: false},
+                {id: 2, title: "Richa reacted to your comment", description: 'Thanks I feel the same', timestampReceived: "5 days ago", read: true}]} />
+            <br />
+            <SfNav showNotification={true} notificationList={[
+                {id: 1, title: "New Follower!", description: 'Ram Joshi has started following you', timestampReceived: "2 days ago", read: true},
+                {id: 2, title: "Richa reacted to your comment", description: 'Thanks I feel the same', timestampReceived: "5 days ago", read: true}]} />
+        </div>
+    );
+}
+```
+
+### New Notification Indication
+
+If the notification list contains an unread notification, a red badge notification indicator will be shown on the notification icon. If all the notifications are read, it is not shown.
+
+### Notification Callback
+
+Subscribe to the onNotificationClicked prop to listen to the notification click events.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showNotification={true} onNotificationClicked={(value) => {alert('Clicked on notification: ' + value.title)}} />
+        </div>
+    );
+}
+```
+
+### View All Callback
+
+Subscribe to the onViewAllClicked prop to listen to the view all button press event.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showNotification={true} onViewAllNotificationsClicked={() => {alert('On View All Clicked')}} notificationList={[
+                {id: 1, title: "New Follower!", description: 'Ram Joshi has started following you', timestampReceived: "2 days ago", read: true},
+                {id: 2, title: "Richa reacted to your comment", description: 'Thanks I feel the same', timestampReceived: "5 days ago", read: true}]} />
+        </div>
+    );
+}
+```
+
+### Advanced Customization
+
+If you are interested in obtaining complete control over the look and feel, you already have it. You can completely override the base css properties of the notification elements according to your requirements. Showing you an example below.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav 
+                showNotification={true} 
+                onViewAllNotificationsClicked={() => {alert('On View All Clicked')}} 
+                notificationList={[
+                    {id: 1, title: "New Follower!", description: 'Ram Joshi has started following you', timestampReceived: "2 days ago", read: false},
+                    {id: 2, title: "Richa reacted to your comment", description: 'Thanks I feel the same', timestampReceived: "5 days ago", read: true}]}
+                stylesNotificationIcon={{backgroundColor: '#ddd', color: 'black', height: '30px', width: '30px', justifyContent: 'center', borderRadius: '15px'}}
+                stylesNotificationUnRead={{backgroundColor: 'black'}}
+                stylesNotificationViewAll={{color: 'black'}}
+                notificationIcon={<Bell style={{marginTop: '5px'}} />}  />
+        </div>
+    );
+}
+```
+
+### Video Tutorial
+
+<iframe width="380" height="220" src="https://www.youtube.com/embed/lsqwMUipZTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Example Scenarios
 
@@ -871,59 +975,76 @@ function Apps(props) {
 
 ## Props
 
-| Prop                          | Type           | Mandatory | Description 
-|-------------------------------|----------------|-----------|---------------------------------
-| variant                       | string         | no        | theme variant such as primary, secondary, danger, etc.
-| theme                         | object         | no        | superflows theme object
-| brand                         | string         | no        | brand name 
-| brandLogo                     | img            | no        | brand logo image
-| menu                          | json object    | no        | json object which renders the menu
-| menuIcon                      | icon           | no        | icon for menu  in portrait view
-| backIcon                      | icon           | no        | icon for back button
-| optionsIcon                   | icon           | no        | icon for options in portrait view
-| showSearch                    | boolean        | no        | flag, which shows / hides search input
-| showSignIn                    | boolean        | no        | flag, which shows / hides sign in button
-| showBack                      | boolean        | no        | flag, which shows / hides back button
-| searchCaption                 | string         | no        | caption of the search input
-| signInCaption                 | string         | no        | caption of the sign in button
-| searchIcon                    | object         | no        | icon for the search input
-| stylesBrand                   | json object    | no        | styles object to customize the brand name
-| stylesBrandLogo               | json object    | no        | styles object to customize the brand logo
-| stylesMenu                    | json object    | no        | styles object to customize the menu
-| stylesSubMenu                 | json object    | no        | styles object to customize the sub menu
-| stylesMenuMobile              | json object    | no        | styles object to customize the mobile menu
-| stylesSubMenuMobile           | json object    | no        | styles object to customize the mobile sub menu
-| stylesMenuMobileSelected      | json object    | no        | styles object to customize the selected mobile menu
-| stylesSignIn                  | json object    | no        | styles object to customize the sign in button
-| stylesSearchContainer         | json object    | no        | styles object to customize the search input container
-| stylesSearchInput             | json object    | no        | styles object to customize the search input
-| stylesContainerDesktop        | json object    | no        | styles object to customize the nav container for landscape view
-| stylesContainerMobile         | json object    | no        | styles object to customize the nav container for portrait view
-| stylesContainerRightMenu      | json object    | no        | styles object to customize the right menu container for portrait view
-| stylesProfilePicture          | json object    | no        | styles object to customize the profile picture
-| stylesProfilePreamble         | json object    | no        | styles object to customize the profile preamble
-| stylesProfileComponent        | json object    | no        | styles object to customize the profile component
-| stylesBack                    | json object    | no        | styles object to customize the back button
-| classNameBrand                | string         | no        | class names string to customize the brand name
-| classNameBrandLogo            | string         | no        | class names string to customize the brand logo
-| classNameSignIn               | string         | no        | class names string to customize the sign in button
-| classNameMenu                 | string         | no        | class names string to customize the menu
-| classNameSubMenu              | string         | no        | class names string to customize the sub menu
-| classNameMenuMobile           | string         | no        | class names string to customize the mobile menu
-| classNameSubMenuMobile        | string         | no        | class names string to customize the mobile sub menu
-| classNameMenuMobileSelected   | string         | no        | class names string to customize the selected mobile menu
-| classNameSearchContainer      | string         | no        | class names string to customize the search input container
-| classNameSearchInput          | string         | no        | class names string to customize the search input
-| classNameContainerDesktop     | string         | no        | class names string to customize the nav container for landscape view
-| classNameContainerMobile      | string         | no        | class names string to customize the nav container for portrait view
-| classNameContainerRightMenu   | string         | no        | class names string to customize the right menu container for portrait view
-| classNameProfilePicture       | string         | no        | class names string to customize the profile picture
-| classNameProfilePreamble      | string         | no        | class names string to customize the profile preamble
-| classNameProfileComponent     | string         | no        | class names string to customize the profile component
-| classNameBack                 | string         | no        | class names string to customize the profile component
-| onBackPressed                 | callback       | no        | callback after the back button is pressed
-| onHomePressed                 | callback       | no        | callback after clicking on home button 
-| onSearchPressed               | callback       | no        | callback after search text is entered
-| onSignInPressed               | callback       | no        | callback after clicking on sign in button
-| onMenuClicked                 | callback       | no        | callback after clicking on any menu
+| Prop                              | Type           | Mandatory | Description 
+|-----------------------------------|----------------|-----------|---------------------------------
+| variant                           | string         | no        | theme variant such as primary, secondary, danger, etc.
+| theme                             | object         | no        | superflows theme object
+| brand                             | string         | no        | brand name 
+| brandLogo                         | img            | no        | brand logo image
+| menu                              | json object    | no        | json object which renders the menu
+| menuIcon                          | icon           | no        | icon for menu  in portrait view
+| backIcon                          | icon           | no        | icon for back button
+| optionsIcon                       | icon           | no        | icon for options in portrait view
+| notificationList                  | json object    | no        | json array that contains the notification information
+| notificationIcon                  | icon           | no        | icon object for the notification bell
+| showNotification                  | boolean        | no        | flag, which shows / hides notifications
+| showSearch                        | boolean        | no        | flag, which shows / hides search input
+| showSignIn                        | boolean        | no        | flag, which shows / hides sign in button
+| showBack                          | boolean        | no        | flag, which shows / hides back button
+| searchCaption                     | string         | no        | caption of the search input
+| signInCaption                     | string         | no        | caption of the sign in button
+| searchIcon                        | object         | no        | icon for the search input
+| stylesBrand                       | json object    | no        | styles object to customize the brand name
+| stylesBrandLogo                   | json object    | no        | styles object to customize the brand logo
+| stylesMenu                        | json object    | no        | styles object to customize the menu
+| stylesSubMenu                     | json object    | no        | styles object to customize the sub menu
+| stylesMenuMobile                  | json object    | no        | styles object to customize the mobile menu
+| stylesSubMenuMobile               | json object    | no        | styles object to customize the mobile sub menu
+| stylesMenuMobileSelected          | json object    | no        | styles object to customize the selected mobile menu
+| stylesSignIn                      | json object    | no        | styles object to customize the sign in button
+| stylesSearchContainer             | json object    | no        | styles object to customize the search input container
+| stylesSearchInput                 | json object    | no        | styles object to customize the search input
+| stylesContainerDesktop            | json object    | no        | styles object to customize the nav container for landscape view
+| stylesContainerMobile             | json object    | no        | styles object to customize the nav container for portrait view
+| stylesContainerRightMenu          | json object    | no        | styles object to customize the right menu container for portrait view
+| stylesProfilePicture              | json object    | no        | styles object to customize the profile picture
+| stylesProfilePreamble             | json object    | no        | styles object to customize the profile preamble
+| stylesProfileComponent            | json object    | no        | styles object to customize the profile component
+| stylesBack                        | json object    | no        | styles object to customize the back button
+| stylesNotificationIcon            | json object    | no        | styles object to customize the notification icon
+| stylesNotificationBadge           | json object    | no        | styles object to customize the notification badge
+| stylesNotificationListContainer   | json object    | no        | styles object to customize the notification list container
+| stylesNotificationRead            | json object    | no        | styles object to customize the notifications that are read
+| stylesNotificationUnRead          | json object    | no        | styles object to customize the notifications that are not read
+| stylesNotificationViewAll         | json object    | no        | styles object to customize the view all button
+| classNameBrand                    | string         | no        | class names string to customize the brand name
+| classNameBrandLogo                | string         | no        | class names string to customize the brand logo
+| classNameSignIn                   | string         | no        | class names string to customize the sign in button
+| classNameMenu                     | string         | no        | class names string to customize the menu
+| classNameSubMenu                  | string         | no        | class names string to customize the sub menu
+| classNameMenuMobile               | string         | no        | class names string to customize the mobile menu
+| classNameSubMenuMobile            | string         | no        | class names string to customize the mobile sub menu
+| classNameMenuMobileSelected       | string         | no        | class names string to customize the selected mobile menu
+| classNameSearchContainer          | string         | no        | class names string to customize the search input container
+| classNameSearchInput              | string         | no        | class names string to customize the search input
+| classNameContainerDesktop         | string         | no        | class names string to customize the nav container for landscape view
+| classNameContainerMobile          | string         | no        | class names string to customize the nav container for portrait view
+| classNameContainerRightMenu       | string         | no        | class names string to customize the right menu container for portrait view
+| classNameProfilePicture           | string         | no        | class names string to customize the profile picture
+| classNameProfilePreamble          | string         | no        | class names string to customize the profile preamble
+| classNameProfileComponent         | string         | no        | class names string to customize the profile component
+| classNameBack                     | string         | no        | class names string to customize the profile component
+| classNameNotificationIcon         | string         | no        | class names string to customize the notification icon
+| classNameNotificationBadge        | string         | no        | class names string to customize the notification badge
+| classNameNotificationListContainer| string         | no        | class names string to customize the notification list container
+| classNameNotificationRead         | string         | no        | class names string to customize the notifications that are read
+| classNameNotificationUnRead       | string         | no        | class names string to customize the notifications that not read
+| classNameNotificationViewAll      | string         | no        | class names string to customize the view all button 
+| onBackPressed                     | callback       | no        | callback after the back button is pressed
+| onHomePressed                     | callback       | no        | callback after clicking on home button 
+| onSearchPressed                   | callback       | no        | callback after search text is entered
+| onSignInPressed                   | callback       | no        | callback after clicking on sign in button
+| onMenuClicked                     | callback       | no        | callback after clicking on any menu
+| onNotificationClicked             | callback       | no        | callback after clicking on a notification
+| onViewAllNotificationsClicked     | callback       | no        | callback after clicking on the view all button
 
