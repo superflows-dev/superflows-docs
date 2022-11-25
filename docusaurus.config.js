@@ -131,7 +131,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `<small>For issues, feature requests or anything else, get in touch via <a href="https://discord.gg/MZpvtbQe">Discord</a></small><br /><br />Copyright © ${new Date().getFullYear()} Superflows<br /><small><small>Maintained by <a href="">Hrushi M</a></small></small>`,
+        copyright: `<small>For issues, feature requests or anything else, get in touch via <a href="https://discord.gg/ksEXS4P9h6">Discord</a></small><br /><br />Copyright © ${new Date().getFullYear()} Superflows<br /><small><small>Maintained by <a href="">Hrushi M</a></small></small>`,
       },
       prism: {
         theme: lightCodeTheme,
