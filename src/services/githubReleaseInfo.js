@@ -1,9 +1,10 @@
+import { Config } from "../config/config";
+
 export default async function githubReleaseInfo() {
     const user = 'superflows-dev';
     const repo = 'react-sf-building-blocks';
-    const token = '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';
     const endpoint = 'https://api.github.com';
-    const creds = `${user}:${token}`;
+    const creds = `${user}:${Config.GITHUB_TOKEN}`;
     const auth = btoa(creds);
     const resource = '/repos/'+user+'/'+repo+'/releases';
 
