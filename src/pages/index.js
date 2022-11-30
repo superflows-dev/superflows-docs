@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import WhatsNew from '@site/src/components/WhatsNew';
+import ServiceGithubReleaseInfo from '../services/githubReleaseInfo'
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero', styles.heroBanner)}>
+    // <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        <p className="hero__subtitle">{siteConfig.title}</p>
+        <br /><br />
+        {/* <p className="hero__subtitle">{siteConfig.title}</p> */}
         <h1 className="hero__title">{siteConfig.tagline}</h1>
         <h3 className="hero__subtitle">For your React serverless project</h3>
-        <br /><br />
+        <br />
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -23,13 +26,31 @@ function HomepageHeader() {
             Get Started
           </Link>
         </div>
+        <br /><br /><br />
       </div>
-    </header>
+    // </header>
   );
 }
 
 export default function Home() {
+
+  const [whatsNew, setWhatsNew] = useState('{}');
+  function setWhatsNewWrap(value) {
+    setWhatsNew(JSON.stringify(value));
+  }
+  function getWhatsNewWrap() {
+    return JSON.parse(whatsNew);
+  }
+
   const {siteConfig} = useDocusaurusContext();
+
+  useEffect(async () => {
+
+    const whatsNew = await ServiceGithubReleaseInfo();
+    setWhatsNewWrap(whatsNew);
+  
+  }, [])
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
@@ -38,6 +59,7 @@ export default function Home() {
       <main>
         <HomepageHeader />
         {/* <HomepageFeatures /> */}
+        <WhatsNew data={getWhatsNewWrap()} />
       </main>
     </Layout>
   );
