@@ -1,5 +1,6 @@
 .docusaurus
 node_modules
 src/config/config.js
+src/config
 
 
