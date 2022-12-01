@@ -1,0 +1,50 @@
+.featuredGridContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featuredContainer {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    width: 300px;
+    box-shadow: 2px 2px 2px #dfdfdf;
+}
+
+.featuredImage {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+@media (orientation: portrait) {
+
+    .featuredContainer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media (orientation: landscape) {
+
+    .featuredContainer {
+        width: 30%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+
+.featuredAuthorProfile {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.featuredFooter {
+    display: flex;
+    align-items: center;
+    color: #666666;
+}

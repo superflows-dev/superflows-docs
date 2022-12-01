@@ -5,7 +5,9 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import WhatsNew from '@site/src/components/WhatsNew';
+import Featured from '../components/Featured';
 import ServiceGithubReleaseInfo from '../services/githubReleaseInfo'
+import ServiceHashnodeFeed from '../services/hashnodeFeed'
 
 import styles from './index.module.css';
 
@@ -21,12 +23,12 @@ function HomepageHeader() {
         <br />
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--primary button--lg"
             to="/docs/hello">
             Get Started
           </Link>
         </div>
-        <br /><br /><br />
+        <br /><br /><br /><br /><br />
       </div>
     // </header>
   );
@@ -42,6 +44,14 @@ export default function Home() {
     return JSON.parse(whatsNew);
   }
 
+  const [blogFeed, setBlogFeed] = useState('[]');
+  function setBlogFeedWrap(value) {
+    setBlogFeed(JSON.stringify(value));
+  }
+  function getBlogFeedWrap() {
+    return JSON.parse(blogFeed);
+  }
+
   const {siteConfig} = useDocusaurusContext();
 
   useEffect(async () => {
@@ -51,15 +61,25 @@ export default function Home() {
   
   }, [])
 
+  useEffect(async () => {
+
+    const hashnodeFeed = await ServiceHashnodeFeed();
+    setBlogFeedWrap(hashnodeFeed);
+
+  })
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Superflows provides you a set of plug and play, reusable and customizable components that you can use to supercharge your React project">
       
       <main>
+        <div className={styles.coverDiv}>
         <HomepageHeader />
         {/* <HomepageFeatures /> */}
         <WhatsNew data={getWhatsNewWrap()} />
+        <Featured data={getBlogFeedWrap()} />
+        </div>
       </main>
     </Layout>
   );

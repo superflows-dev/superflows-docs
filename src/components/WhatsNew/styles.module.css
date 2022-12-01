@@ -5,8 +5,9 @@
 .cardContainer {
     padding: 10px;
     border-radius: 5px;
-    border: solid 1px gray;
     cursor: pointer;
+    box-shadow: 2px 2px 2px #dfdfdf;
+    background-color: white;
 }
 
 .cardAuthorProfile {
