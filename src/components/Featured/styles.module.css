@@ -7,9 +7,8 @@
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: white;
     width: 300px;
-    box-shadow: 2px 2px 2px #dfdfdf;
+    border: solid 1px #888888;
 }
 
 .featuredImage {

@@ -6,8 +6,7 @@
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 2px #dfdfdf;
-    background-color: white;
+    border: solid 1px #888888;
 }
 
 .cardAuthorProfile {
