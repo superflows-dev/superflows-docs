@@ -886,6 +886,146 @@ function Apps(props) {
 <iframe width="380" height="220" src="https://www.youtube.com/embed/lsqwMUipZTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+<br />
+
+## Announcement Banner
+
+### Anatomy
+
+Banner section is composed of the following customizable elements
+- Container
+- Banner Text
+- Call to action button
+
+All of these components are highlighted below:
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showBanner={true} stylesBannerContainer={{border: 'solid 3px red'}} stylesBannerText={{border: 'solid 3px red'}} stylesBannerCta={{border: 'solid 3px red'}}/>
+        </div>
+    );
+}
+```
+
+### Show / Hide Banner
+
+By default banner is not visible. To show it, set the showBanner prop to true.
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showBanner={true}/>
+        </div>
+    );
+}
+```
+
+### Banner Text
+
+To change the banner text, set the string value to the bannerText property.
+
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showBanner={true} bannerText={"30% Summer Discount 💰"} />
+        </div>
+    );
+}
+```
+
+### Banner Call-to-Action
+
+To change the call to action text, set the string value to the bannerCta  property.
+
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showBanner={true} bannerText={"30% Summer Discount 💰"} bannerCta={"Subscribe Now"} />
+        </div>
+    );
+}
+```
+
+### Call-to-Action Callback
+
+You can subscribe to the onBannerCtaPressed prop to listen to get a callback after the user clicks on the call-to-action button. As follows:
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showBanner={true} bannerText={"30% Summer Discount 💰"} bannerCta={"Subscribe Now"} onBannerCtaPressed={() => {alert('clicked on cta');}} />
+        </div>
+    );
+}
+```
+
+
+### Dismiss Button
+
+By default, the dismiss button is visible. You can also hide it as show below:
+
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showBanner={true} bannerEnableDismiss={false} />
+            <br /><br /><br />
+            <SfNav showBanner={true} bannerEnableDismiss={true} />
+        </div>
+    );
+}
+```
+
+### Advanced Customization
+
+If you need full control over the look and feel of the banner section, you can utilize inline css. Just use any of the banner related style properties. Showing an example below:
+
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showBanner={true}  stylesBannerContainer={{backgroundColor: 'black', paddingTop: '10px', paddingBottom: '10px'}} stylesBannerCta={{backgroundColor: 'white', color: 'black', fontSize: '120%'}} stylesBannerText={{fontSize: '120%'}} />
+        </div>
+    );
+}
+```
+
+### Inject Custom Banner Component
+
+You can also replace the existing banner with your own custom component. Just assign your custom component to the bannerComponent prop. An example is shown below:
+
+```jsx live
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav showBanner={true} bannerComponent={<div style={{backgroundColor: 'black', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white'}}><div>We will be down for maintenance tomorrow 13:00 - 13:30 hrs</div><img src="https://www.route66sodas.com/wp-content/uploads/2019/01/Alert.gif" style={{width: '30px', height: '30px', marginBottom: '5px', marginLeft: '10px'}}/></div>} />
+        </div>
+    );
+}
+```
+
+### Video Tutorial
+
+<iframe width="380" height="220" src="https://www.youtube.com/embed/ebAf6_MAft8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Example Scenarios
 
 ### Night Mode
@@ -987,6 +1127,17 @@ function Apps(props) {
 | optionsIcon                       | icon           | no        | icon for options in portrait view
 | notificationList                  | json object    | no        | json array that contains the notification information
 | notificationIcon                  | icon           | no        | icon object for the notification bell
+| profilePicture                    | img            | no        | url for profile picture
+| profileMenu                       | json object    | no        | json object which renders the profile menu
+| profilePreamble                   | component      | no        | custom react component (above the profile menu)
+| profileComponent                  | component      | no        | custom react component (below the profile menu)
+| bannerComponent                   | component      | no        | custom react component (above the navigation bar)
+| optionsIcon                       | icon           | no        | icon for options button
+| bannerText                        | string         | no        | banner text
+| bannerCta                         | string         | no        | text of the banner cta button
+| bannerEnableDismiss               | boolean        | no        | flag, which shows / hides the dismiss button on the banner
+| showProfile                       | boolean        | no        | flag, which shows / hides the profile section
+| showBanner                        | boolean        | no        | flag, which shows / hides the banner section
 | showNotification                  | boolean        | no        | flag, which shows / hides notifications
 | showSearch                        | boolean        | no        | flag, which shows / hides search input
 | showSignIn                        | boolean        | no        | flag, which shows / hides sign in button
@@ -1017,6 +1168,9 @@ function Apps(props) {
 | stylesNotificationRead            | json object    | no        | styles object to customize the notifications that are read
 | stylesNotificationUnRead          | json object    | no        | styles object to customize the notifications that are not read
 | stylesNotificationViewAll         | json object    | no        | styles object to customize the view all button
+| stylesBannerContainer             | json object    | no        | styles object to customize the banner container
+| stylesBannerText                  | json object    | no        | styles object to customize the banner text
+| stylesBannerCta                   | json object    | no        | styles object to customize the cta button of the banner
 | classNameBrand                    | string         | no        | class names string to customize the brand name
 | classNameBrandLogo                | string         | no        | class names string to customize the brand logo
 | classNameSignIn                   | string         | no        | class names string to customize the sign in button
@@ -1040,6 +1194,9 @@ function Apps(props) {
 | classNameNotificationRead         | string         | no        | class names string to customize the notifications that are read
 | classNameNotificationUnRead       | string         | no        | class names string to customize the notifications that not read
 | classNameNotificationViewAll      | string         | no        | class names string to customize the view all button 
+| classNameBannerContainer          | string         | no        | class names string to customize the container of the banner
+| classNameBannerText               | string         | no        | class names string to customize the banner text
+| classNameBannerCta                | string         | no        | class names string to customize the banner cta button
 | onBackPressed                     | callback       | no        | callback after the back button is pressed
 | onHomePressed                     | callback       | no        | callback after clicking on home button 
 | onSearchPressed                   | callback       | no        | callback after search text is entered
