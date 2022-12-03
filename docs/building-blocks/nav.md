@@ -927,7 +927,7 @@ function Apps(props) {
 
 ### Banner Text
 
-To change the banner text, set the string value to the bannerText property.
+To change the banner text, set the string value to the bannerText property. For mobile screens, a separate (optional) prop bannerTextMobile has also been provided, which you can use as well.
 
 
 ```jsx live
@@ -935,7 +935,7 @@ function Apps(props) {
   
     return (
         <div>
-            <SfNav showBanner={true} bannerText={"30% Summer Discount 💰"} />
+            <SfNav showBanner={true} bannerText={"30% OFF On Select Products 💰"} bannerTextMobile={"30% OFF 💰"} />
         </div>
     );
 }
@@ -943,7 +943,7 @@ function Apps(props) {
 
 ### Banner Call-to-Action
 
-To change the call to action text, set the string value to the bannerCta  property.
+To change the call to action text, set the string value to the bannerCta  property. For mobile screens, a separate (optional) prop bannerCtaMobile has also been provided, which you can use as well!
 
 
 ```jsx live
@@ -951,7 +951,7 @@ function Apps(props) {
   
     return (
         <div>
-            <SfNav showBanner={true} bannerText={"30% Summer Discount 💰"} bannerCta={"Subscribe Now"} />
+            <SfNav showBanner={true} bannerText={"30% Summer Discount 💰"} bannerTextMobile={"30% OFF 💰"} bannerCta={"Buy Now"} bannerCtaMobile={"Buy"} />
         </div>
     );
 }
@@ -966,7 +966,7 @@ function Apps(props) {
   
     return (
         <div>
-            <SfNav showBanner={true} bannerText={"30% Summer Discount 💰"} bannerCta={"Subscribe Now"} onBannerCtaPressed={() => {alert('clicked on cta');}} />
+            <SfNav showBanner={true} bannerText={"30% Summer Discount 💰"} bannerTextMobile={"30% OFF 💰"} bannerCta={"Buy Now"} bannerCtaMobile={"Buy"} onBannerCtaPressed={() => {alert('clicked on cta');}} />
         </div>
     );
 }
@@ -983,9 +983,9 @@ function Apps(props) {
   
     return (
         <div>
-            <SfNav showBanner={true} bannerEnableDismiss={false} />
+            <SfNav showBanner={true} showBanner={true} bannerText={"30% Summer Discount 💰"} bannerTextMobile={"30% OFF 💰"} bannerCta={"Buy Now"} bannerCtaMobile={"Buy"} bannerEnableDismiss={false} />
             <br /><br /><br />
-            <SfNav showBanner={true} bannerEnableDismiss={true} />
+            <SfNav showBanner={true} showBanner={true} bannerText={"30% Summer Discount 💰"} bannerTextMobile={"30% OFF 💰"} bannerCta={"Buy Now"} bannerCtaMobile={"Buy"} bannerEnableDismiss={true} />
         </div>
     );
 }
@@ -1001,7 +1001,7 @@ function Apps(props) {
   
     return (
         <div>
-            <SfNav showBanner={true}  stylesBannerContainer={{backgroundColor: 'black', paddingTop: '10px', paddingBottom: '10px'}} stylesBannerCta={{backgroundColor: 'white', color: 'black', fontSize: '120%'}} stylesBannerText={{fontSize: '120%'}} />
+            <SfNav showBanner={true} showBanner={true} bannerText={"30% Summer Discount 💰"} bannerTextMobile={"30% OFF 💰"} bannerCta={"Buy Now"} bannerCtaMobile={"Buy"} stylesBannerContainer={{backgroundColor: 'black', paddingTop: '10px', paddingBottom: '10px'}} stylesBannerCta={{backgroundColor: 'white', color: 'black', fontSize: '120%'}} stylesBannerText={{fontSize: '120%'}} />
         </div>
     );
 }
@@ -1016,7 +1016,7 @@ function Apps(props) {
   
     return (
         <div>
-            <SfNav showBanner={true} bannerComponent={<div style={{backgroundColor: 'black', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white'}}><div>We will be down for maintenance tomorrow 13:00 - 13:30 hrs</div><img src="https://www.route66sodas.com/wp-content/uploads/2019/01/Alert.gif" style={{width: '30px', height: '30px', marginBottom: '5px', marginLeft: '10px'}}/></div>} />
+            <SfNav showBanner={true} bannerComponent={<div style={{backgroundColor: 'black', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white'}}><div>We will be down for maintenance tomorrow 13:00 - 13:30 hrs</div><img src="https://www.route66sodas.com/wp-content/uploads/2019/01/Alert.gif" style={{width: '30px', height: '30px', marginBottom: '5px', marginLeft: '10px'}}/></div>} bannerComponentMobile={<div style={{backgroundColor: 'black', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white'}}><div>Maintenance tomorrow 13:00 hrs</div><img src="https://www.route66sodas.com/wp-content/uploads/2019/01/Alert.gif" style={{width: '30px', height: '30px', marginBottom: '5px', marginLeft: '10px'}}/></div>} />
         </div>
     );
 }
