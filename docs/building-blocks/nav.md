@@ -1132,9 +1132,12 @@ function Apps(props) {
 | profilePreamble                   | component      | no        | custom react component (above the profile menu)
 | profileComponent                  | component      | no        | custom react component (below the profile menu)
 | bannerComponent                   | component      | no        | custom react component (above the navigation bar)
+| bannerComponentMobile             | component      | no        | custom react component (above the navigation bar) for mobile screens
 | optionsIcon                       | icon           | no        | icon for options button
 | bannerText                        | string         | no        | banner text
+| bannerTextMobile                  | string         | no        | banner text for mobile screens
 | bannerCta                         | string         | no        | text of the banner cta button
+| bannerCtaMobile                   | string         | no        | text of the banner cta button for mobile screens
 | bannerEnableDismiss               | boolean        | no        | flag, which shows / hides the dismiss button on the banner
 | showProfile                       | boolean        | no        | flag, which shows / hides the profile section
 | showBanner                        | boolean        | no        | flag, which shows / hides the banner section
