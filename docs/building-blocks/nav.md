@@ -1009,7 +1009,7 @@ function Apps(props) {
 
 ### Inject Custom Banner Component
 
-You can also replace the existing banner with your own custom component. Just assign your custom component to the bannerComponent prop. An example is shown below:
+You can also replace the existing banner with your own custom component. Just assign your custom component to the bannerComponent prop. You can also set an optional custom component differently for mobiles, use the bannerComponentMobile prop. An example is shown below:
 
 ```jsx live
 function Apps(props) {
