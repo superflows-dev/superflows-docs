@@ -6,7 +6,7 @@ export default function Featured(props) {
 
     return (
         <div className='container'>
-            <h3>Featured Tutorials</h3>
+            <h3>Featured Content</h3>
             <div className={styles.featuredGridContainer}>
                 {
                     props.data.map((item, key) => {

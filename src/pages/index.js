@@ -15,21 +15,30 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     // <header className={clsx('hero', styles.heroBanner)}>
-      <div className="container">
+    <div>
+      <div className="container" style={{textAlign: 'center'}}>
         <br /><br />
         {/* <p className="hero__subtitle">{siteConfig.title}</p> */}
         <h1 className="hero__title">{siteConfig.tagline}</h1>
-        <h3 className="hero__subtitle">For your React serverless project</h3>
+        <h3 className="hero__subtitle">For Your React Project</h3>
         <br />
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/hello">
-            Get Started
-          </Link>
+            Start Building
+          </Link> &nbsp;&nbsp;
         </div>
-        <br /><br /><br /><br /><br />
+        <br /><br />
+        
       </div>
+      {/* <hr /> */}
+      <div style={{textAlign: 'center'}}>
+          <h5><a href="https://discord.gg/ksEXS4P9h6" style={{color: 'gray', fontWeight: '500'}}>Join the Community</a></h5>
+      </div>
+      <hr style={{marginTop: '0px'}} />
+      <br /><br />
+    </div>
     // </header>
   );
 }

@@ -2,19 +2,25 @@
 sidebar_position: 6
 ---
 
-# Navigation
+# Navigation Bar
 
-The navigation component is **SfNav**. This building block is the navigation bar provided by Superflows.
+The navigation bar component is **SfNav**. This building block is the navigation bar provided by Superflows.
 
 ## Features
 
 SfNav has the following built-in features.
-- **Custom Branding** - Brand name and brand logo are customizable, just pass them via props
-- **Custom Menus** - Menu options are fully customizable, just pass your menu structure as a JSON object via props
-- **Custom Icons** - All icons fully customizable, just pass them via props
-- **Custom Design and Look & Feel** - Design of SfNav is fully customizable, you can pass class names or css styles directly to each individual sub-component
-- **Extendible** - SfNav functionality can be extended, you can place custom components inside the navigation bar
-- **Responsive** - SfNav renders separately in portrait and landscape mode
+- [**Brand Info**](#brand) - Brand name and brand logo are customizable, just pass them via props
+- [**Menus**](#menu) - Menu options are fully customizable, just pass your menu structure as a JSON object via props
+- [**Search Input**](#search) - SfNav comes with a search input field
+- [**Call-to-action Button**](#sign-in) - SfNav comes with a call-to-action button, which can be used to highlight key actions such as sign in and subscribe.
+- [**Profile Section**](#profile) - User profile section is also included, which can be used to show the status of a signed in user. It also includes a separate profile menu, that is JSON-customizable as well.
+- [**Back Button**](#back) - SfNav transforms itself into a navbar with a back button on inner screens / pages for history-based back navigation
+- [**Notifications**](#notifications) - Notifications feature is in-built, which includes a notification bell and a JSON-customizable   dropdown list to show recent notifications
+- [**Announcement Banner**](#announcement-banner) - Provision for showing an announcement banner is also given on the top of the navigation bar
+- **Routing** - Client-side routing is built inside this component, no external routing library required
+- **Customizability** - All features mentioned above are inherently customizable. You can override the basic look and feel by passing your own inline css or stylenames to the SfNav component.
+- **Responsive** - SfNav is fully responsive and adapts to all screen sizes
+- **Extendibility** - In some places, SfNav also allows you to inject your own components, for greater customizability
 
 ## Usage
 
@@ -1026,6 +1032,281 @@ function Apps(props) {
 
 <iframe width="380" height="220" src="https://www.youtube.com/embed/ebAf6_MAft8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br />
+
+## Routing
+
+SfNav ships with routing & navigation. It is disabled by default. 
+
+### Enable Routing
+
+To enable routing set the enableRouting prop to true, as shown below:
+
+```jsx
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav enableRouting={true} />
+        </div>
+    );
+}
+```
+
+However, setting enableRouting to true alone is not enough. Some more configuration is required.
+
+### Routing & Navigation Scenarios
+
+SfNav supports the following routing & navigation scenarios:
+- **Routing To Home** - User should be navigated to the home component after a click on the brand info section
+- **Routing To Menus** - User should be routed to the respective components after a click on any of the menus / submenus
+- **Routing To Notifications** - User should be routed either to a notification list component or to a notification detail component, after a click on the notification section
+- **Event-based Routing** - Users should be programmatically routed somewhere after a particular event has happened, for instance, the user submits a form successfully and now needs to be navigated to the next page
+- **Url-based Routing** - User should be routed to the appropriate page after directly arriving on a page, say via a deeplink url
+
+### Routing To Home
+
+To get the routing to home working, pass a navigation object to the homeMenu prop. Navigation object is a JSON object with three properties - link, component and args.
+
+```jsx
+{caption: "Home", link: "home", component: <Home />}
+```
+
+*Link* is shown in the address bar of the browser. *Component* is the react component that needs to be displayed. *Args* is the component array to be passed down to the component. Routing to home is setup as shown in the below example.
+
+```jsx
+
+const Home = () => {
+  return <div style={{width: '100%', padding: '30px', textAlign: 'center', backgroundColor: '#efefef', border: 'solid 3px white', color: 'gray'}}>Home Component</div>
+}
+
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav enableRouting={true} homeMenu={{args: [], link: "home", component: <Home />}}/>
+        </div>
+    );
+}
+
+```
+
+View Demo
+
+[![View Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-oudbtg?file=App.tsx)
+
+### Routing To Menus
+
+Routing to different pages via menus can be achieved by including components in the json array passed to the menu prop (please refer [this section](#menu) to read more about menu). In the json menu array in the example below, we have included the respective components for the About menu and the Services submenu. Hence, for them, the menu click event triggers routing, whereas for other menus, the onMenuClicked callback (default method) gets invoked. Routing is handled in the same way for the profile menu as well.
+
+```jsx
+
+const About = () => {
+  return <div style={{padding: '30px', textAlign: 'center', backgroundColor: '#efefef', border: 'solid 3px white', color: 'gray'}}>About Component</div>
+}
+
+const Services = () => {
+  return <div style={{padding: '30px', textAlign: 'center', backgroundColor: '#efefef', border: 'solid 3px white', color: 'gray'}}>Services Component</div>
+}
+
+function Apps(props) {
+  
+    return (
+        <div>
+            <SfNav 
+                enableRouting={true} 
+                menu={[{caption: "About", link: "about", component: <About /> }, [{caption: "Solutions", link: "solutions"}, {caption: "Products", link: "products"}, {caption: "Services", link: "services", component: <Services />}], [{caption: "Contact", link: "contact"}, {caption: 'Instagram', link: "instagram"}]]} 
+                />
+        </div>
+    );
+}
+
+```
+
+View Demo
+
+[![View Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-oudbtg?file=App.tsx)
+
+### Routing To Notifications
+
+It is possible to route either to the notifications list page after a click on the view all button, or to the notification detail page after a click on any particular notification in the notification list. To setup routing for the view all click event, create a JSON navigation object and set it to the notificationListMenu prop, whereas to setup routing for click event on any single notification from the list, create another JSON navigation object and set it to the notificationDetailsMenu prop. Look at the example below.
+
+In case menus are not passed to the notificationListMenu or the notificationDetailsMenu props, the default callback functions are invoked (see [notifications](#notifications)). 
+
+> On the notification details screen, the url parameter, which is the notification id, can be obtained by using the useContext hook.
+
+```jsx
+
+import { useContext } from 'react';
+import { ContextSfNav, SfNav } from 'react-sf-building-blocks';
+
+```
+
+```jsx
+
+const NotificationList = () => {
+  return (
+    <div style={{textAlign: 'center', padding: '30px', backgroundColor: '#efefef', border: 'solid 3px white', color: 'gray'}}>
+      Notification List Component
+    </div>
+  );
+};
+
+const NotificationDetails = () => {
+  const contextSfNav = useContext(ContextSfNav);
+
+  return (
+    <div style={{padding: '30px', textAlign: 'center', backgroundColor: '#efefef', border: 'solid 3px white', color: 'gray'}}>     Notification Details Component + {' '} + {JSON.stringify(contextSfNav.navigationData.args)}
+    </div>
+  );
+};
+
+const Home = () => {
+  return (
+    <div style={{padding: '30px', textAlign: 'center', backgroundColor: '#efefef', border: 'solid 3px white', color: 'gray'}}>
+      Home Component
+    </div>
+  );
+};
+
+export default function App() {
+  return (
+    <div>
+      <SfNav
+        enableRouting={true}
+        showNotification={true}
+        notificationList={[
+          {
+            id: 1,
+            title: 'title 1',
+            description: 'This is the desc 1',
+            timestampReceived: '2 days ago',
+            read: false,
+          },
+          {
+            id: 2,
+            title: 'title 2',
+            description: 'This is the desc 2',
+            timestampReceived: '5 days ago',
+            read: true,
+          },
+          {
+            id: 3,
+            title: 'title 3',
+            description: 'This is the desc 3 also it is necessary',
+            timestampReceived: '1 month ago',
+            read: false,
+          },
+        ]}
+        homeMenu={{ caption: 'home', link: 'home', component: <Home /> }}
+        notificationListMenu={{
+          args: [],
+          link: 'notif_list',
+          component: <NotificationList />,
+        }}
+        notificationDetailsMenu={{
+          args: [],
+          link: 'notif_details',
+          component: <NotificationDetails />,
+        }}
+      />
+    </div>
+  );
+}
+```
+
+
+View Demo
+
+[![View Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-o87vv6?file=App.tsx)   
+
+### Event-based Routing
+
+It is also possible to programmatically route a user to any component, say in response to any event. For instance, user fills up a form, submits it and needs to be taken to the success page or error depending on the result of the submit operation. To implement this you can access the navigateTo function via useContext and pass a navigation object to its navigateTo function, at runtime. 
+
+One more point to note, all components that are not explicility specified in the homeMenu, profileMenu, notificationListMenu or notificationDetailsMenu, should be provided in the otherMenu prop.
+
+An example is shown below:
+
+```jsx
+
+const Home = () => {
+  const contextSfNav = useContext(ContextSfNav)
+  return (
+    <div style={{textAlign: 'center',padding: '30px',backgroundColor: '#efefef',border: 'solid 3px white',color: 'gray'}}>
+      <div>
+        <b>Home Component</b>
+      </div>
+      <br />
+      <div style={{color: 'blue',textDecoration: 'underline',cursor: 'pointer'}} onClick={() => {
+          contextSfNav.navigateTo({
+            component: <About />,
+            link: 'about',
+            args: [],
+          });
+        }}>About Component</div>
+    </div>
+  );
+};
+
+const About = () => {
+  const contextSfNav = useContext(ContextSfNav);
+  return (
+    <div style={{textAlign: 'center',padding: '30px',backgroundColor: '#efefef',border: 'solid 3px white',color: 'gray'}}>
+      <div>
+        <b>About Component</b>
+      </div>
+      <br />
+      <div style={{color: 'blue',textDecoration: 'underline',cursor: 'pointer'}} onClick={() => {
+          contextSfNav.navigateTo({
+            component: <Home />,
+            link: 'home',
+            args: [],
+          });
+        }}>Back To Home</div>
+    </div>
+  );
+};
+
+export default function App() {
+  return (
+    <div>
+      <SfNav
+        enableRouting={true}
+        homeMenu={{ args: [], link: 'home', component: <Home /> }}
+        otherMenu={[{ link: 'about', component: <About />, args: [] }]}
+      />
+    </div>
+  );
+}
+```
+
+
+View Demo
+
+[![View Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-xvwnym?file=App.tsx)   
+
+
+### Url-based Routing
+
+When users arrive on a specific url, say via a deeplink, SfNav tries to find the appropriate component to route the user to. SfNav assumes the following url format:
+
+```
+https://<www-domain>/<link>/<param1>/<param2>/....
+```
+
+An example could be:
+
+```
+https://www.example.com/learn/12/2
+```
+
+- **www-domain** is the domain of your website (www.example.com)
+- **link** maps to the component (learn)
+- **params** are passed on the component as an array via props ([12,2])
+
+SfNav picks up the link part from a url and tries to find a matching component. To find the match, it looks up the menu objects that you have provided in the various menu props - homeMenu, menu, profileMenu, notificationListMenu, notificationDetailMenu and otherMenu. If a match is found, routing is triggered, otherwise a default error page is shown.
+
 ## Example Scenarios
 
 ### Night Mode
@@ -1115,30 +1396,41 @@ function Apps(props) {
 
 ## Props
 
+Alphabetically arranged:
+
 | Prop                              | Type           | Mandatory | Description 
 |-----------------------------------|----------------|-----------|---------------------------------
-| variant                           | string         | no        | theme variant such as primary, secondary, danger, etc.
-| theme                             | object         | no        | superflows theme object
-| brand                             | string         | no        | brand name 
-| brandLogo                         | img            | no        | brand logo image
-| menu                              | json object    | no        | json object which renders the menu
-| menuIcon                          | icon           | no        | icon for menu  in portrait view
 | backIcon                          | icon           | no        | icon for back button
-| optionsIcon                       | icon           | no        | icon for options in portrait view
-| notificationList                  | json object    | no        | json array that contains the notification information
-| notificationIcon                  | icon           | no        | icon object for the notification bell
-| profilePicture                    | img            | no        | url for profile picture
-| profileMenu                       | json object    | no        | json object which renders the profile menu
-| profilePreamble                   | component      | no        | custom react component (above the profile menu)
-| profileComponent                  | component      | no        | custom react component (below the profile menu)
 | bannerComponent                   | component      | no        | custom react component (above the navigation bar)
 | bannerComponentMobile             | component      | no        | custom react component (above the navigation bar) for mobile screens
-| optionsIcon                       | icon           | no        | icon for options button
-| bannerText                        | string         | no        | banner text
-| bannerTextMobile                  | string         | no        | banner text for mobile screens
 | bannerCta                         | string         | no        | text of the banner cta button
 | bannerCtaMobile                   | string         | no        | text of the banner cta button for mobile screens
 | bannerEnableDismiss               | boolean        | no        | flag, which shows / hides the dismiss button on the banner
+| bannerText                        | string         | no        | banner text
+| bannerTextMobile                  | string         | no        | banner text for mobile screens
+| brand                             | string         | no        | brand name 
+| brandLogo                         | img            | no        | brand logo image
+| enableRouting                     | boolean        | no        | flag, which enables routing
+| homeMenu                          | component      | no        | json object for home menu
+| menu                              | json object    | no        | json object which renders the menu
+| menuIcon                          | icon           | no        | icon for menu  in portrait view
+| notificationList                  | json object    | no        | json array that contains the notification information
+| notificationListMenu              | json object    | no        | json object for notification list menu
+| notificationDetailsMenu           | json object    | no        | json object for notification details menu
+| notificationIcon                  | icon           | no        | icon object for the notification bell
+| optionsIcon                       | icon           | no        | icon for options in portrait view
+| onBackPressed                     | callback       | no        | callback after the back button is pressed
+| onHomePressed                     | callback       | no        | callback after clicking on home button 
+| onMenuClicked                     | callback       | no        | callback after clicking on any menu
+| onNotificationClicked             | callback       | no        | callback after clicking on a notification
+| onSearchPressed                   | callback       | no        | callback after search text is entered
+| onSignInPressed                   | callback       | no        | callback after clicking on sign in button
+| onViewAllNotificationsClicked     | callback       | no        | callback after clicking on the view all button
+| profileComponent                  | component      | no        | custom react component (below the profile menu)
+| profileMenu                       | json object    | no        | json object which renders the profile menu
+| profilePicture                    | img            | no        | url for profile picture
+| profilePreamble                   | component      | no        | custom react component 
+(above the profile menu)
 | showProfile                       | boolean        | no        | flag, which shows / hides the profile section
 | showBanner                        | boolean        | no        | flag, which shows / hides the banner section
 | showNotification                  | boolean        | no        | flag, which shows / hides notifications
@@ -1148,63 +1440,66 @@ function Apps(props) {
 | searchCaption                     | string         | no        | caption of the search input
 | signInCaption                     | string         | no        | caption of the sign in button
 | searchIcon                        | object         | no        | icon for the search input
+| theme                             | object         | no        | superflows theme object
+| variant                           | string         | no        | theme variant such as primary, secondary, danger, etc.
+
+Props for inline CSS Styling
+
+| Prop                              | Type           | Mandatory | Description 
+|-----------------------------------|----------------|-----------|---------------------------------
+| stylesBack                        | json object    | no        | styles object to customize the back button
+| stylesBannerContainer             | json object    | no        | styles object to customize the banner container
+| stylesBannerCta                   | json object    | no        | styles object to customize the cta button of the banner
+| stylesBannerText                  | json object    | no        | styles object to customize the banner text
 | stylesBrand                       | json object    | no        | styles object to customize the brand name
 | stylesBrandLogo                   | json object    | no        | styles object to customize the brand logo
-| stylesMenu                        | json object    | no        | styles object to customize the menu
-| stylesSubMenu                     | json object    | no        | styles object to customize the sub menu
-| stylesMenuMobile                  | json object    | no        | styles object to customize the mobile menu
-| stylesSubMenuMobile               | json object    | no        | styles object to customize the mobile sub menu
-| stylesMenuMobileSelected          | json object    | no        | styles object to customize the selected mobile menu
-| stylesSignIn                      | json object    | no        | styles object to customize the sign in button
-| stylesSearchContainer             | json object    | no        | styles object to customize the search input container
-| stylesSearchInput                 | json object    | no        | styles object to customize the search input
 | stylesContainerDesktop            | json object    | no        | styles object to customize the nav container for landscape view
 | stylesContainerMobile             | json object    | no        | styles object to customize the nav container for portrait view
 | stylesContainerRightMenu          | json object    | no        | styles object to customize the right menu container for portrait view
-| stylesProfilePicture              | json object    | no        | styles object to customize the profile picture
-| stylesProfilePreamble             | json object    | no        | styles object to customize the profile preamble
-| stylesProfileComponent            | json object    | no        | styles object to customize the profile component
-| stylesBack                        | json object    | no        | styles object to customize the back button
-| stylesNotificationIcon            | json object    | no        | styles object to customize the notification icon
+| stylesMenu                        | json object    | no        | styles object to customize the menu
+| stylesMenuMobile                  | json object    | no        | styles object to customize the mobile menu
+| stylesMenuMobileSelected          | json object    | no        | styles object to customize the selected
 | stylesNotificationBadge           | json object    | no        | styles object to customize the notification badge
+| stylesNotificationIcon            | json object    | no        | styles object to customize the notification icon
 | stylesNotificationListContainer   | json object    | no        | styles object to customize the notification list container
 | stylesNotificationRead            | json object    | no        | styles object to customize the notifications that are read
 | stylesNotificationUnRead          | json object    | no        | styles object to customize the notifications that are not read
 | stylesNotificationViewAll         | json object    | no        | styles object to customize the view all button
-| stylesBannerContainer             | json object    | no        | styles object to customize the banner container
-| stylesBannerText                  | json object    | no        | styles object to customize the banner text
-| stylesBannerCta                   | json object    | no        | styles object to customize the cta button of the banner
+| stylesProfileComponent            | json object    | no        | styles object to customize the profile component
+| stylesProfilePicture              | json object    | no        | styles object to customize the profile picture
+| stylesProfilePreamble             | json object    | no        | styles object to customize the profile preamble
+| stylesSearchContainer             | json object    | no        | styles object to customize the search input container
+| stylesSearchInput                 | json object    | no        | styles object to customize the search input
+| stylesSignIn                      | json object    | no        | styles object to customize the sign in button
+| stylesSubMenu                     | json object    | no        | styles object to customize the sub menu
+| stylesSubMenuMobile               | json object    | no        | styles object to customize the mobile sub menu mobile menu
+
+Props for classname-based styling
+
+| classNameBack                     | string         | no        | class names string to customize the profile component
+| classNameBannerContainer          | string         | no        | class names string to customize the container of the banner
+| classNameBannerCta                | string         | no        | class names string to customize the banner cta button
+| classNameBannerText               | string         | no        | class names string to customize the banner text
 | classNameBrand                    | string         | no        | class names string to customize the brand name
 | classNameBrandLogo                | string         | no        | class names string to customize the brand logo
-| classNameSignIn                   | string         | no        | class names string to customize the sign in button
-| classNameMenu                     | string         | no        | class names string to customize the menu
-| classNameSubMenu                  | string         | no        | class names string to customize the sub menu
-| classNameMenuMobile               | string         | no        | class names string to customize the mobile menu
-| classNameSubMenuMobile            | string         | no        | class names string to customize the mobile sub menu
-| classNameMenuMobileSelected       | string         | no        | class names string to customize the selected mobile menu
-| classNameSearchContainer          | string         | no        | class names string to customize the search input container
-| classNameSearchInput              | string         | no        | class names string to customize the search input
 | classNameContainerDesktop         | string         | no        | class names string to customize the nav container for landscape view
 | classNameContainerMobile          | string         | no        | class names string to customize the nav container for portrait view
 | classNameContainerRightMenu       | string         | no        | class names string to customize the right menu container for portrait view
-| classNameProfilePicture           | string         | no        | class names string to customize the profile picture
-| classNameProfilePreamble          | string         | no        | class names string to customize the profile preamble
-| classNameProfileComponent         | string         | no        | class names string to customize the profile component
-| classNameBack                     | string         | no        | class names string to customize the profile component
-| classNameNotificationIcon         | string         | no        | class names string to customize the notification icon
+| classNameMenu                     | string         | no        | class names string to customize the menu
+| classNameMenuMobile               | string         | no        | class names string to customize the mobile menu
+| classNameMenuMobileSelected       | string         | no        | class names string to customize the selected mobile menu
 | classNameNotificationBadge        | string         | no        | class names string to customize the notification badge
+| classNameNotificationIcon         | string         | no        | class names string to customize the notification icon
 | classNameNotificationListContainer| string         | no        | class names string to customize the notification list container
 | classNameNotificationRead         | string         | no        | class names string to customize the notifications that are read
 | classNameNotificationUnRead       | string         | no        | class names string to customize the notifications that not read
 | classNameNotificationViewAll      | string         | no        | class names string to customize the view all button 
-| classNameBannerContainer          | string         | no        | class names string to customize the container of the banner
-| classNameBannerText               | string         | no        | class names string to customize the banner text
-| classNameBannerCta                | string         | no        | class names string to customize the banner cta button
-| onBackPressed                     | callback       | no        | callback after the back button is pressed
-| onHomePressed                     | callback       | no        | callback after clicking on home button 
-| onSearchPressed                   | callback       | no        | callback after search text is entered
-| onSignInPressed                   | callback       | no        | callback after clicking on sign in button
-| onMenuClicked                     | callback       | no        | callback after clicking on any menu
-| onNotificationClicked             | callback       | no        | callback after clicking on a notification
-| onViewAllNotificationsClicked     | callback       | no        | callback after clicking on the view all button
+| classNameProfileComponent         | string         | no        | class names string to customize the profile component
+| classNameProfilePicture           | string         | no        | class names string to customize the profile picture
+| classNameProfilePreamble          | string         | no        | class names string to customize the profile preamble
+| classNameSignIn                   | string         | no        | class names string to customize the sign in button
+| classNameSearchContainer          | string         | no        | class names string to customize the search input container
+| classNameSearchInput              | string         | no        | class names string to customize the search input
+| classNameSubMenu                  | string         | no        | class names string to customize the sub menu
+| classNameSubMenuMobile            | string         | no        | class names string to customize the mobile sub menu
 

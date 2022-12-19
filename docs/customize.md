@@ -1,26 +1,26 @@
 ---
 sidebar_label: 'Theme & Customization'
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Theme & Customization
 
-Let us start by learning about the most basic package - react-sf-themes. Use the react-sf-themes package to access the global configuration and the default theme provided by Superflows.
+Let us start by learning about the most basic supermod - react-sf-themes. Use the react-sf-themes supermod to access the global configuration and the default theme provided by Superflows.
 
 ## react-sf-themes
 
-Use the react-sf-themes package to access the global configuration & default theme provided by Superflows. Then customize it further by changing the default values to suit your UI. 
+Use the react-sf-themes supermod to access the global configuration & default theme provided by Superflows. Then customize it further by changing the default values to suit your UI. 
 
 ## How It Works
 
 Customization works as follows:
-- Access the default configuration and theme values using this package
+- Access the default configuration and theme values using this supermod
 - Modify them as per your requirement
-- Pass the modified object to your Superflows components
+- Pass the modified object down to your other supermods
 
 ## Theme
 
-This package provides default values for:
+This supermod provides default values for:
 - Variants
 - Types
 - Colors
@@ -88,7 +88,7 @@ Dimensions are default dimensions for certain Superflows components
 | notificationListWidth           | 200
 | notificationListMaxHeight       | 400
 
-## Modes
+### Modes
 
 Modes are:
 
@@ -97,7 +97,7 @@ Modes are:
 | Day        | day
 | Night      | night
 
-## InputTypes
+### InputTypes
 
 Input types are types of input accepted from the users in the input field.
 
@@ -138,7 +138,7 @@ import Themes from 'react-sf-themes'
 
 const App = () => {
 
-  console.log('Themes', Themes.getTheme());
+  console.log('Theme', Themes.getTheme());
 
   return <div></div>
 }

@@ -1,8 +1,8 @@
 {
   "label": "Building Blocks",
-  "position":4,
+  "position":5,
   "link": {
     "type": "generated-index",
-    "description": "Basic building blocks of the superflows component"
+    "description": "This section details the react-sf-building-blocks supermod."
   }
 }
