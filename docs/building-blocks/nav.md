@@ -1411,7 +1411,7 @@ Alphabetically arranged:
 | brand                             | string         | no        | brand name 
 | brandLogo                         | img            | no        | brand logo image
 | enableRouting                     | boolean        | no        | flag, which enables routing
-| homeMenu                          | component      | no        | json object for home menu
+| homeMenu                          | json objeect   | no        | json object for home menu
 | menu                              | json object    | no        | json object which renders the menu
 | menuIcon                          | icon           | no        | icon for menu  in portrait view
 | notificationList                  | json object    | no        | json array that contains the notification information
@@ -1419,6 +1419,7 @@ Alphabetically arranged:
 | notificationDetailsMenu           | json object    | no        | json object for notification details menu
 | notificationIcon                  | icon           | no        | icon object for the notification bell
 | optionsIcon                       | icon           | no        | icon for options in portrait view
+| otherMenu                         | icon           | no        | array of navigation objects for components that are dynamically routed to
 | onBackPressed                     | callback       | no        | callback after the back button is pressed
 | onHomePressed                     | callback       | no        | callback after clicking on home button 
 | onMenuClicked                     | callback       | no        | callback after clicking on any menu
@@ -1476,6 +1477,8 @@ Props for inline CSS Styling
 
 Props for classname-based styling
 
+| Prop                              | Type           | Mandatory | Description 
+|-----------------------------------|----------------|-----------|---------------------------------
 | classNameBack                     | string         | no        | class names string to customize the profile component
 | classNameBannerContainer          | string         | no        | class names string to customize the container of the banner
 | classNameBannerCta                | string         | no        | class names string to customize the banner cta button
