@@ -1055,6 +1055,14 @@ function Apps(props) {
 
 However, setting enableRouting to true alone is not enough. Some more configuration is required.
 
+### Set Root Url
+
+If your application is not deployed at the root of your domain, you should provide the root deployment url to the rootUrl prop. If you do not explicitly provide this url, SfNav assumes it to be:
+
+```
+<protocol:> // <hostname> : <port> /
+```
+
 ### Routing & Navigation Scenarios
 
 SfNav supports the following routing & navigation scenarios:
@@ -1431,6 +1439,8 @@ Alphabetically arranged:
 | profileMenu                       | json object    | no        | json object which renders the profile menu
 | profilePicture                    | img            | no        | url for profile picture
 | profilePreamble                   | component      | no        | custom react component 
+(above the profile menu)
+| rootUrl                           | string         | no        | root url where the app is deployed (required for routing)
 (above the profile menu)
 | showProfile                       | boolean        | no        | flag, which shows / hides the profile section
 | showBanner                        | boolean        | no        | flag, which shows / hides the banner section
