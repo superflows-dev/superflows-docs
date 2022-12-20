@@ -1069,7 +1069,7 @@ SfNav supports the following routing & navigation scenarios:
 To get the routing to home working, pass a navigation object to the homeMenu prop. Navigation object is a JSON object with three properties - link, component and args.
 
 ```jsx
-{caption: "Home", link: "home", component: <Home />}
+{args: [], link: "home", component: <Home />}
 ```
 
 *Link* is shown in the address bar of the browser. *Component* is the react component that needs to be displayed. *Args* is the component array to be passed down to the component. Routing to home is setup as shown in the below example.
