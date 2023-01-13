@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[6902],{6358:e=>{e.exports=JSON.parse('{"label":"software architecture","permalink":"/blog/tags/software-architecture","allTagsPath":"/blog/tags","count":1}')}}]);

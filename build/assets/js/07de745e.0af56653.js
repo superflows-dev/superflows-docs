@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[8519],{4653:e=>{e.exports=JSON.parse('{"label":"continuous integration","permalink":"/blog/tags/continuous-integration","allTagsPath":"/blog/tags","count":1}')}}]);

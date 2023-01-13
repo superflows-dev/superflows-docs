@@ -5,30 +5,17 @@ sidebar_position: 3
 
 # Getting Started
 
-Since you are reading this section, we can safely assume that you have understood the basic philosophy of Superflows and are ready to explore further. 
+Since you have reached this section, we can safely assume that you have understood the basic philosophy of Superflows and are ready to explore further. 
 
-## Basic Installation
+**Motivation** - Can modular web design be achieved using just html, css and javascript? Theoretically the answer is a resounding yes! Web components rolling out in the HTML specification opened this door for us. The motivation of Superflows is constructing a foundation that enables developers to build modular, scalable and maintainable apps using html, css & javascript.
 
-### react-sf-themes
+**Design** - Guilding principle for the design has always been to strike a balance between - (1) Delightfully simple developer experience and (2) Supporting most popular functionality. "Unless a clean & simple way to implement a new feature that doesn't complicate the life of the developer-user is figured out, it is not taken up for development." is the decision-making philosophy.
 
-Start by installing the react-sf-themes supermod, which encapsulates the global configuration options with respect to appearance, layout and behaviour. 
+**Development & Quality Control** - Test driven development approach with a focus on maintaining 100 percent unit test code coverage for the main workflow is the methodology of working.
 
-```bash
-npm install --save react-sf-themes
-```
+## Supermods
 
-### react-sf-building-blocks
+Superflows is designed as a collection of reusable web component libraries, called SuperMods. Every SuperMod has a defined purpose & function and can be thought of as a single plug and play unit. By integrating these SuperMods together, one can build good quality complex web applications, pretty quickly.
 
-Next install the react-sf-building-blocks supermod, which includes the primary UI components.
-
-```bash
-npm install --save react-sf-building-blocks
-```
-
-## Further Reading
-
-After you are have installed the above mentioned supermods, you will have access to basic functionality. To know more, read on please:
-
-- react-sf-themes ([Docs](./customize.md))
-- react-sf-building-blocks ([Docs](./category/building-blocks/))
+- **SfNav** - This is the first powerful supermod, which you should know about. It provides the navigation functionality and enables you to develop a full-featured single page application (SPA) using just HTML, CSS, Javascript. [Read More](https://superflows.dev/docs/navigation)
 

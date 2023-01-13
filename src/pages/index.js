@@ -20,7 +20,7 @@ function HomepageHeader() {
         <br /><br />
         {/* <p className="hero__subtitle">{siteConfig.title}</p> */}
         <h1 className="hero__title">{siteConfig.tagline}</h1>
-        <h3 className="hero__subtitle">For Your React Project</h3>
+        <h3 className="hero__subtitle">For Your Web Project</h3>
         <br />
         <div className={styles.buttons}>
           <Link
