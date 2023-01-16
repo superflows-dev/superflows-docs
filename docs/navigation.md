@@ -31,9 +31,9 @@ sidebar_position: 4
 
 ## Demo
 
-<iframe frameborder="0" width="100%" height="500px" src="https://sfnav-web-component-demo.superflowsappv3.repl.co/"></iframe>
+<iframe frameborder="0" width="100%" height="500px" src="https://Single-Page-Modular-App-Using-Pure-HTML-CSS-Javascript.superflowsappv3.repl.co"></iframe>
 
-<a href="https://replit.com/@SuperflowsAppv3/SfNav-Web-Component#index.html">View Demo Project &gt;</a>
+<a href="https://replit.com/@SuperflowsAppv3/Single-Page-Modular-App-Using-Pure-HTML-CSS-Javascript#index.html">View Demo Project &gt;</a>
 
 ## Usage
 
@@ -155,6 +155,25 @@ sidebar_position: 4
       <!-- Page Content -->
       <div slot="content"></div>
     </sf-nav>
+
+    <script>
+      var routeMap = [];
+    </script>
+    <script>
+      function getCurrentPathName() {
+        return window.location.hash.length === 0 ? '' : window.location.hash.split("/")[0].replace('#', '');
+      }
+      function getCurrentArgs() {
+        return routeMap[getCurrentPathName() + '.html'];
+      }
+    </script>
+    <script>
+      document.getElementsByTagName('sf-nav')[0].addEventListener('searchClick', () => {console.log('hurray');})
+      document.getElementsByTagName('sf-nav')[0].addEventListener('routeChange', (e) => {
+        routeMap[e.detail.pathName] = e.detail.args;
+      })
+    </script>
+    
   </body>
 </html>
 
