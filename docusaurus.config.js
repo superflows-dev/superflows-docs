@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Superflows',
-  tagline: 'SuperMods',
+  tagline: 'Supermods On Demand',
   url: 'https://superflows.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -66,6 +66,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      stylesheets: [
+        "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,800",
+      ],
       navbar: {
         title: 'Superflows',
         logo: {
@@ -145,6 +148,7 @@ const config = {
         playgroundPosition: 'top',
       },
     }),
+  
 };
 
 module.exports = config;

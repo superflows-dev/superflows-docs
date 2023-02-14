@@ -15,9 +15,11 @@ export default function Featured(props) {
 
                             <div key={key} className={styles.featuredContainer} onClick={() => {window.location.href="https://blog.superflows.dev"}}>
                                 <img src={item.coverImage} className={styles.featuredImage}  />
-                                <b>{item.title}</b> <br />
-                                <div className={styles.featuredFooter}>
-                                    <small>{item.dateAdded} ago</small> &nbsp; 
+                                <div>
+                                    <b>{item.title}</b> <br />
+                                    <div className={styles.featuredFooter}>
+                                        <small>{item.dateAdded} ago</small> &nbsp; 
+                                    </div>
                                 </div>
                             </div>
                         );

@@ -3,17 +3,12 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 4rem 0;
-  position: relative;
-  overflow: hidden;
+ :root {
+  --blue: #0051a2;
+  --yellow: #cf9903;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
+
 
 .buttons {
   display: flex;
@@ -21,5 +16,93 @@
   justify-content: center;
 }
 
-.coverDiv {
+.valueWhat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-image: url(https://superflows-images.s3.ap-south-1.amazonaws.com/pattern_3_24.png);
+  background-position: center bottom;
+  background-repeat: no-repeat; */
+}
+
+.valueWhat h1 {
+  font-weight: 900;
+}
+
+.valueWhat h2 {
+  font-weight: 400;
+}
+
+
+.valueWhat > div {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.valueProp1 h1 {
+  font-weight: 900;
+}
+
+
+.valueProp1 div {
+  text-align: center;
+}
+
+.valueProp1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 0px;
+}
+
+.valueProp2 h1 {
+  font-weight: 900;
+}
+
+.valueProp2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 0px;
+  margin-top: 100px;
+}
+
+
+.valueProp2 h1 {
+}
+
+.valueProp2 h2 {
+  font-weight: 400;
+}
+
+@media (orientation: landscape) {
+
+  .valueWhat img {
+      width: 50%;
+  }
+
+  .valueWhat h1 {
+      margin-top: 10vh;
+  }
+
+  .valueProp1 div {
+    min-width: 25%;
+  }
+
+  .valueProp1 {
+      margin-top: 100px;
+  }
+
+  .valueProp2 img {
+    width: 40%;
+  }
+
+  .valueProp2 div {
+    width: 30%;
+  }
+
 }
