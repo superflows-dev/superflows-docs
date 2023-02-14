@@ -51,7 +51,8 @@ Superflows is in its early days! The concept has been reasonably crystallized. F
 - *December 22 2nd half* - **Pivot**: Decision to develop web components rather than react modules
 
 **2023**
-- January 23 - Rehashing SfNav as a web component 
+- *January 23* - Rehashed SfNav as a web component 
+- February 23 - Development of authentication supermod
 
 ## How Superflows Started
 

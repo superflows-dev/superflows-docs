@@ -19,3 +19,5 @@ Superflows is designed as a collection of reusable web component libraries, call
 
 - **SfNav** - This is the first powerful supermod, which you should know about. It provides the navigation functionality and enables you to develop a full-featured single page application (SPA) using just HTML, CSS, Javascript. [Read More](https://superflows.dev/docs/navigation)
 
+- **SfUserAuth** - This is the authentication supermod. It functions as a microservice and has an auto-scalable backend. [Read More](https://superflows.dev/docs/authentication)
+
