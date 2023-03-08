@@ -20,20 +20,20 @@ function HomepageHeader() {
         <br /><br />
         {/* <p className="hero__subtitle">{siteConfig.title}</p> */}
         <h1 className={clsx('hero__title', styles.heroTitle)}>{siteConfig.tagline}</h1>
-        <h3 className="hero__subtitle">Give us a try developer</h3>
-        <p>Worst-case, you'd only have<br />spent a few minutes.<br />Best-case, you'd have experienced<br />something life-changing! 💯</p>
+        <h3 className="hero__subtitle">The Microservice Boilerplate To Kickstart Your Cloud App!</h3>
+        <p>Build and launch a low-code microservice boilerplate <br /> for your cloud application. Only in minutes. <br /> We promise! 💯</p>
         <div className={styles.buttons}>
           <Link
             style={{margin: '5px'}}
             className="button button--primary button--lg"
-            to="https://form.jotform.com/230442120386042">
-            Fork A Supermod
+            to="http://superflows-console.s3-website-us-east-1.amazonaws.com/">
+            Sign In To The Console
           </Link>
           <Link
             style={{margin: '5px'}}
             className="button button--secondary button--lg"
             to="/docs/hello">
-            Start Building DIY
+            Tutorials
           </Link>
         </div>
         <br /><br />
@@ -51,13 +51,13 @@ function HomepageHeader() {
       <div class={styles.valueProp1}>
 
           <div>
-              <h1>Fork An Existing<br />Supermod Configuration</h1>
+              <h1>An Independently Deployable<br />Microservice Bundled With<br />Its Frontend</h1>
           </div>
           <div>
               <h2>or</h2>
           </div>
           <div>
-              <h1>Go For A<br />Do It Yourself Setup</h1>
+              <h1>Supermods Are Built On<br />Serverless & Auto-scalable Tech</h1>
           </div>
 
       </div>
