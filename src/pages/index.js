@@ -20,8 +20,8 @@ function HomepageHeader() {
         <br /><br />
         {/* <p className="hero__subtitle">{siteConfig.title}</p> */}
         <h1 className={clsx('hero__title', styles.heroTitle)}>{siteConfig.tagline}</h1>
-        <h3 className="hero__subtitle">The Microservice Boilerplate To Kickstart Your Cloud App!</h3>
-        <p>Build and launch a low-code microservice boilerplate <br /> for your cloud application. Only in minutes. <br /> We promise! 💯</p>
+        <h3 className="hero__subtitle">Create & Refine Your Cloud App Recipe!</h3>
+        <p>Build and launch a low-code microfrontend boilerplate <br /> for your cloud application. Only in minutes. <br /> We promise! 💯</p>
         <div className={styles.buttons}>
           <Link
             style={{margin: '5px'}}
