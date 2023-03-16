@@ -20,13 +20,13 @@ function HomepageHeader() {
         <br /><br />
         {/* <p className="hero__subtitle">{siteConfig.title}</p> */}
         <h1 className={clsx('hero__title', styles.heroTitle)}>{siteConfig.tagline}</h1>
-        <h3 className="hero__subtitle">Create & Refine Your Cloud App Recipe!</h3>
-        <p>Build and launch a low-code microfrontend boilerplate <br /> for your cloud application. Only in minutes. <br /> We promise! 💯</p>
+        <h3 className="hero__subtitle">Save hours of web development drudgery!</h3>
+        <p>Write code only for your custom use-case and use microfrontends for common features</p>
         <div className={styles.buttons}>
           <Link
             style={{margin: '5px'}}
             className="button button--primary button--lg"
-            to="http://superflows-console.s3-website-us-east-1.amazonaws.com/">
+            to="https://console.superflows.dev">
             Sign In To The Console
           </Link>
           <Link
