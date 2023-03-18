@@ -40,7 +40,7 @@ function HomepageHeader() {
         <br /><br />
       </div>
       
-      <div class={styles.valueProp2}>
+      <div className={styles.valueProp2}>
 
           <img src="https://superflows-images.s3.ap-south-1.amazonaws.com/developer3.png" />
           <div>
@@ -68,7 +68,7 @@ function HomepageHeader() {
         <img src="https://superflows-images.s3.ap-south-1.amazonaws.com/blocks.png" />
       </div>
 
-      <div class={styles.valueProp1}>
+      <div className={styles.valueProp1}>
 
           <div>
               <h1>An Independently Deployable<br />Microservice Bundled With<br />Its Frontend</h1>
@@ -82,7 +82,7 @@ function HomepageHeader() {
 
       </div>
 
-      <div class={styles.valueProp2}>
+      <div className={styles.valueProp2}>
 
           <img src="https://superflows-images.s3.ap-south-1.amazonaws.com/apps.png"/>
           <div>
@@ -92,7 +92,7 @@ function HomepageHeader() {
           
       </div>
 
-      <div class={styles.valueProp2}>
+      <div className={styles.valueProp2}>
 
           <div>
               <h1>Reuse Your Supermods Configs Across Your Apps</h1>
