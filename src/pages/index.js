@@ -55,7 +55,7 @@ function HomepageHeader() {
         <div>
             <h1>Are You A Product Manager?</h1>
             <h2>Supermods are your new supersavers!</h2>
-            <p>Use Supermods to drastically shorten your timelines. For all standard functionality simply integrate Supermods. Only invest in getting code written for custom use-cases.</p>
+            <p>Use Supermods to drastically shorten your timelines. For all standard functionality simply integrate Supermods. Invest in writing code only for custom use-cases.</p>
         </div>
         <img src="https://superflows-images.s3.ap-south-1.amazonaws.com/product_manager.png" />
       </div>
