@@ -15,9 +15,9 @@ Since you have reached this section, we can safely assume that you have understo
 
 ## Supermods
 
-Superflows is designed as a collection of reusable web component libraries, called SuperMods. Every SuperMod has a defined purpose & function and can be thought of as a single plug and play unit. By integrating these SuperMods together, one can build good quality complex web applications, pretty quickly.
+Superflows is designed as a collection of reusable micro-frontends libraries, called SuperMods. Every supermod has a defined purpose & function and can be thought of as a single plug and play unit. A supermod can also be thought of as an independently deployable module, that encapsulates the backend and the frontend functionality in a single building block. By integrating multiple supermods together, one can build good quality complex web applications, pretty quickly.
 
 - **SfNav** - This is the first powerful supermod, which you should know about. It provides the navigation functionality and enables you to develop a full-featured single page application (SPA) using just HTML, CSS, Javascript. [Read More](https://superflows.dev/docs/navigation)
 
-- **SfUserAuth** - This is the authentication supermod. It functions as a microservice and has an auto-scalable backend. [Read More](https://superflows.dev/docs/authentication)
+- **SfUserAuth** - This is the authentication supermod. [Read More](https://superflows.dev/docs/authentication)
 

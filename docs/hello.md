@@ -5,15 +5,15 @@ sidebar_position: 1
 
 # Introduction
 
-Superflows provides you plug and play, reusable and customizable web components, called as SuperMods, that you can use to supercharge your web project.
+Superflows provides you plug and play, reusable and customizable micro-frontends, called as SuperMods, that you can use to supercharge your web project.
 
 ## What is Superflows
 
-Superflows is designed as a collection of reusable web component libraries, called SuperMods. Every SuperMod has a defined purpose & function and can be thought of as a single plug and play unit. By integrating these SuperMods together, one can build good quality complex web applications, pretty quickly.
+Superflows is designed as a collection of reusable micro-frontends, called SuperMods. Every SuperMod has a defined purpose & function and can be thought of as a single plug and play unit. By integrating these SuperMods together, one can build good quality complex web applications, pretty quickly.
 
 ## Why Superflows
 
-- **No Backend Code** - Cut down on your development effort and team-size. Development using SuperMods does not require any backend coding. Using Superflows, even a single frontend developer can develop full-featured cloud-native applications.  
+- **No Backend Code** - Cut down on your development effort, drudgery and team-size. Development using SuperMods does not require any backend coding. Using Superflows, even a single frontend developer can develop full-featured cloud-native applications.  
 
 - **Improved Quality** - Use of SuperMods naturally makes your code modular and maintainable. Even junior developers would end up producing quality code output.
 
@@ -23,7 +23,7 @@ Superflows currently supports the following:
 
 ### Frontend In Any Framework
 
-Supermods are designed as web components, so they are supported natively by browsers. They work with any frontend framework such as React, Angular, Vue, etc. or with no framework at all!
+The frontends of Supermods are designed as web components, so they are supported natively by browsers. They work with any frontend framework such as React, Angular, Vue, etc. or with no framework at all!
 
 ### Backend On AWS
 
@@ -37,7 +37,7 @@ Currently, Superflows is a one-person-driving-everything project. If you wish to
 
 ## Support
 
-Superflows does not have a dedicated support team right now. However, rest assured that I will personally look into and answer all your queries. To get in touch, please <a href="https://discord.com/invite/ksEXS4P9h6">join the community</a>. I hang there most of my working hours and would be happy to help. Please note that my working hours are according to the Indian Standard Time (GMT + 05:30). Please give me 24 hours on weekdays and 48 hours on weekends to reply back.
+Superflows does not have a dedicated support team right now. I, the creator will personally be responsible for all the support requests. To get in touch, please <a href="https://discord.com/invite/ksEXS4P9h6">join the community</a>. I hang there most of my working hours and would be happy to help. Please note that my working hours are according to the Indian Standard Time (GMT + 05:30). Please give me 24 hours on weekdays and 48 hours on weekends to reply back.
 
 ## Project Status
 
@@ -53,6 +53,7 @@ Superflows is in its early days! The concept has been reasonably crystallized. F
 **2023**
 - *January 23* - Rehashed SfNav as a web component 
 - February 23 - Development of authentication supermod
+- March 23 - Deployment framework developed; Proof-of-concept deployment mechanism for the authentication supermod developed; Demoed to prospective users and their feedback obtained
 
 ## How Superflows Started
 

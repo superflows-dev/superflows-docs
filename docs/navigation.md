@@ -5,17 +5,17 @@ sidebar_position: 4
 
 # Navigation
 
-**SfNav** is the navigation web component provided by Superflows. It renders both the header and the footer. This component allows implementation of the single page application architecture (SPA) using pure HTML, CSS and Javascript.
+**SfNav** is the navigation supermod provided by Superflows. It renders both the header and the footer. This supermod allows implementation of the single page application architecture (SPA) using pure HTML, CSS and Javascript.
 
 ## Features
 
-- **Accessibility** - This web component is designed considering the W3C accessibility recommendations
+- **Accessibility** - This supermod is designed considering the W3C accessibility recommendations
 - **Interoperability** - This is a web component, hence natively supported by the browsers. It can be used across any frontend framework such as React, Angular, Vue or with no framework at all
 
 ## Functionality
 
-- **Header & Footer** - SfNav component generates both the header and footer view
-- **Routing** - Routing is built inside this component, no external routing library required
+- **Header & Footer** - SfNav generates both the header and footer view
+- **Routing** - Routing is built inside this supermod, no external routing library required
 - **Brand Info** - Brand name and logo are customizable
 - **Main Menu** - Menu is fully customizable and is accepted as an un-ordered list
 - **Search Input** - SfNav ships with a search input field
@@ -251,7 +251,7 @@ Set the brand logo as show below. It will be rendered both in the header and the
 
 ### Step 3 - Routing
 
-Routing is enabled by default. Every hash link specified in the SfNav component needs to be backed by its separate html component. For example the links in the brand info section (above section), contains #home as the link. For routing to work, simply create a separate home.html component for it. SfNav will then automatically take care of routing.
+Routing is enabled by default. Every hash link specified in the SfNav supermod needs to be backed by its separate html component. For example the links in the brand info section (above section), contains #home as the link. For routing to work, simply create a separate home.html component for it. SfNav will then automatically take care of routing.
 
 ```html
 
@@ -263,7 +263,7 @@ Routing is enabled by default. Every hash link specified in the SfNav component 
     
 ```
 
-For passing parameters to individual components, include the following javascript code. Individual components can then fetch their parameters from the associative array routeMap.
+For passing parameters to individual supermod, include the following javascript code. Individual supermod can then fetch their parameters from the associative array routeMap.
 
 ```html
   <script>
@@ -315,7 +315,7 @@ You can compose your menu using unordered lists, as shown in the below example.
 
 ### Step 5 - Setup Search
 
-Search Input is shown by default and the SfNav component throws a searchClick event after the user types something in the search input field and presses enter. To handle the searchClick event:
+Search Input is shown by default and the SfNav supermod throws a searchClick event after the user types something in the search input field and presses enter. To handle the searchClick event:
 
 ```html
 
