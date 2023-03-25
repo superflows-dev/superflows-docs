@@ -115,45 +115,36 @@ The purpose of the sample app is to give you a ready code-base for integrating t
 
 The entire code is in HTML, CSS and Javascript. Please go through the code, it is extensively commented for your easier understanding.
 
-The sample app contains three pages:
+The sample app contains the following files:
 - index.html
 - auth.html
-- home.html
+- styles.css
+- util.js
 
 ### index.html
 
-This page is the main entry point of the application. It contains the navigation component (sf-nav), which sets up a single-page architecture for the entire app. It contains the primary boiler-plate javascript code for the navigation, routing & authentication functionalities. You can copy it as is in your app and then customize it according to your needs.
+- This file functions as the entry point of the sample app
+- It is simply a wrapper for the authentication supermod declared in auth.html
+- If the user is signed in, it shows the sign in information
+- If the user is not signed in, it shows a link to the sign in page
 
 ### auth.html
 
-This page is the wrapper page for the sf-user-auth authentication component. It contains the html code for rendering the sf-user-auth component and the javascript code for handling authentication events. You can copy it as is in your app and then customize it according to your needs.
+- This file integrates the authentication supermod
+- It handles the sign in and sign out events as well
 
-### home.html
+### styles.css
 
-This is simply a demo page and does not have any special functional significance.
+- Custom css styles are specified in this css stylesheet
 
-For a code walkthough in detail, please refer to the video below:
+### util.js
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Oft7bOy_axk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+- This javascript file contains some simple utilities
+
 
 ## Step 6 - Customize The Appearance
 
-To customize the look and feel, you can utilize the css custom properties and parts that are exposed by the sf-nav and the sf-user-auth components.
-
-### sf-nav
-
-The navigation component exposes the following css parts:
-- cta
-
-The navigation component exposes the following css custom properties:
-- nav-background-color
-- nav-color
-- notif-background-color
-- notif-color
-- menu-background-color
-- menu-color
-- footer-background-color
-- footer-color
+To customize the look and feel, you can utilize the css custom properties and parts that are exposed by the sf-user-auth components.
 
 ### sf-user-auth
 
